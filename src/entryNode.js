@@ -1,12 +1,14 @@
-import 'babel-polyfill';
-import ReactDOM from 'react-dom';
+import ReactDOMServer from 'react-dom/server';
 import React from 'react';
 import { StaticRouter } from 'react-router-dom';
 
 import Application from './Application';
 
-ReactDOM.render(
-  <StaticRouter page={'/'}>
+const renderApp = url => ReactDOMServer.renderToString(
+  <StaticRouter location={url}>
     <Application />
   </StaticRouter>
-, document.getElementById('app-container'));
+);
+
+export default renderApp;
+global.renderApp = renderApp; //hack
