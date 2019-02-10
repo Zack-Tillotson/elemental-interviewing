@@ -1,0 +1,24 @@
+/* base vars */
+
+$color-brand-primary: #c7372a;
+$color-brand-secondary: #333044;
+$color-brand-black: #390c09;
+$color-brand-white: #ffffff;
+
+$content-font-family: Lora, sans-serif;
+
+$header-font-family: Lora, sans-serif;
+
+$dark-background-text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+
+/* partials */
+
+%div-dark {
+  color: $color-brand-white;
+  text-shadow: $dark-background-text-shadow;
+}
+
+%div-dark-primary {
+  @extend %div-dark;
+  background: $color-brand-primary;
+}

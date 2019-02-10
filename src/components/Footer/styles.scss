@@ -1,19 +1,5 @@
+@import 'src/_vars';
+
 footer {
-  background: #0D3D65;
-  margin-top: 10px;
-
-  footer {
-    text-align: center;
-    padding: 10px;
-    color: #FBFDFE;
-
-    a:link, a:visited {
-      color: white;
-      text-decoration: none;
-
-      &:hover {
-        color: #ccc;
-      }
-    }
-  }
+  @extend %div-dark-primary;
 }

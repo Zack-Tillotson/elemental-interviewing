@@ -38,8 +38,9 @@ if(!isProdBuild) {
   config.devServer = {
     port: '8888',
     index: 'template.html',
+    contentBase: 'static',
     proxy: {
-      '/': {
+      '**/': {
         target: 'http://localhost:8888',
         pathRewrite: {'.*': 'template.html'},
       }
