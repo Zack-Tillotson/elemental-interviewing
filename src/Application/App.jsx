@@ -10,7 +10,8 @@ function App() {
   return (
     <Provider store={store()}>
       <Page>
-        <Route path="" exact component={Homepage} />
+        <Route path="/" exact component={Homepage} />
+        <Route path="/about-us/" exact component={() => 'about us'} />
       </Page>
     </Provider>
   );

@@ -27,19 +27,6 @@ const config = {
     path: path.join(__dirname, '../app'),
     publicPath: isProdBuild ? '/' : 'http://localhost:8888/' // Required for webpack-serve
   },
-  module: {
-    rules: [
-      ...baseConfig.module.rules,
-      {
-        test: /\.scss$/,
-        use: [
-          { loader: 'style-loader' },
-          { loader: 'css-loader' },
-          { loader: 'sass-loader' },
-        ],
-      },
-    ]
-  }
   plugins: [
     ...baseConfig.plugins,
     templatePlugin,
@@ -47,16 +34,16 @@ const config = {
 };
 
 if(!isProdBuild) {
-  config.serve = {
-    content: "./app",
-    add: function(app, middleware, options) {
-      // since we're manipulating the order of middleware added, we need to handle
-      // adding these two internal middleware functions.
-      middleware.webpack();
-      middleware.content();
-
-      app.use(serve('./app'));
-    }
+  config.devtool = 'inline-source-map';
+  config.devServer = {
+    port: '8888',
+    index: 'template.html',
+    proxy: {
+      '/': {
+        target: 'http://localhost:8888',
+        pathRewrite: {'.*': 'template.html'},
+      }
+    },
   }
 }
 

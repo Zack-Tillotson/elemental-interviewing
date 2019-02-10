@@ -4,11 +4,11 @@
   "description": "How to interview using the Element method",
   "scripts": {
     "clean": "rm -rf app/",
-    "start": "./node_modules/webpack-serve/cli.js --port 8888 --config ./webpack/web.config.js",
+    "start": "node_modules/.bin/webpack-dev-server --config=./webpack/web.config.js",
     "compile-web": "./node_modules/webpack-cli/bin/webpack.js -p --config=./webpack/web.config.js",
-    "compile-node": "./node_modules/webpack-cli/bin/webpack.js --config ./webpack/node.config.js",
-    "build-static": "./buildStatic.js",
-    "run-static": "yarn clean && yarn compile-web && yarn compile-node && yarn build-static"
+    "compile-node": "./node_modules/webpack-cli/bin/webpack.js -p --config ./webpack/node.config.js",
+    "compile-routes": "./buildStatic.js",
+    "compile": "yarn clean && yarn compile-web && yarn compile-node && yarn compile-routes"
   },
   "repository": {
     "type": "git",
@@ -42,11 +42,13 @@
     "redux-saga": "^0.16.0",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.3",
-    "webpack": "^4.2.0"
+    "webpack": "4.3.0"
   },
   "devDependencies": {
     "handlebars": "^4.1.0",
+    "mini-css-extract-plugin": "0.5.0",
     "webpack-cli": "^2.0.13",
+    "webpack-dev-server": "^3.1.14",
     "webpack-serve": "^0.2.0"
   }
 }

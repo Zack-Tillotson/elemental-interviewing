@@ -3,8 +3,8 @@
 const fs = require('fs');
 const Handlebars = require('handlebars');
 
-const source = fs.readFileSync('./src/template.html', 'utf8');
-const template = Handlebars.compile(source, {noEscape: true});
+const source = fs.readFileSync('./app/template.html', 'utf8');
+const template = Handlebars.compile(source);
 
 require('./app/build');
 
@@ -18,7 +18,7 @@ routes.forEach(route => {
 
   const routeHtml = global.renderApp(route);
 
-  const fileContent = template({body: routeHtml});
+  const fileContent = template({appHtml: routeHtml});
   const fileName = `${dir}/index.html`;
   fs.writeFile(fileName, fileContent, function(err) {
     if(err) {

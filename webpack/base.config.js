@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const isProdBuild = process.argv.indexOf('-p') !== -1;
 
@@ -9,6 +10,12 @@ const envPlugin = new webpack.DefinePlugin({
   __RELEASE__: JSON.stringify(isProdBuild),
   'process.env.NODE_ENV': isProdBuild ? '"production"' : '"development"'
 });
+
+let cssLoader = isProdBuild ? {
+  loader: MiniCssExtractPlugin.loader,
+} : {
+  loader: 'style-loader'
+};
 
 const config = {
   mode: isProdBuild ? 'production' : 'development',
@@ -29,10 +36,21 @@ const config = {
           presets: ['es2015'],
         },
       },
+      {
+        test: /\.scss$/,
+        use: [
+          cssLoader,
+          { loader: 'css-loader' },
+          { loader: 'sass-loader' },
+        ],
+      },
     ]
   },
   plugins: [
     envPlugin,
+    new MiniCssExtractPlugin({
+      filename: '[name].[hash].css',
+    }),
   ],
 };
 
