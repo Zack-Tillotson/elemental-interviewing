@@ -5,10 +5,12 @@
   "scripts": {
     "clean": "rm -rf app/",
     "start": "node_modules/.bin/webpack-dev-server --config=./webpack/web.config.js",
+    "compile-app": "mkdir app",
+    "compile-assets": "cp -r static/* app/",
     "compile-web": "./node_modules/webpack-cli/bin/webpack.js -p --config=./webpack/web.config.js",
     "compile-node": "./node_modules/webpack-cli/bin/webpack.js -p --config ./webpack/node.config.js",
     "compile-routes": "./buildStatic.js",
-    "compile": "yarn clean && yarn compile-web && yarn compile-node && yarn compile-routes"
+    "compile": "yarn clean && yarn compile-app && yarn compile-assets && yarn compile-web && yarn compile-node && yarn compile-routes"
   },
   "repository": {
     "type": "git",

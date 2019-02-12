@@ -1,11 +1,11 @@
 {
-  "firebase": "zt-jumpstart",
-  "public": "app",
-  "rewrites": [{
-  	"source": "**",
-  	"destination": "/index.html"
-  }],
-  "ignore": [
-    "app/tests/**"
-  ]
+  "hosting": {
+    "public": "app",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "app/build*"
+    ]
+  }
 }

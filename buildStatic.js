@@ -8,7 +8,13 @@ const template = Handlebars.compile(source);
 
 require('./app/build');
 
-const routes = ['', '/about-us'];
+const routes = [
+'',
+'/about-us',
+'/introduction',
+'/elemental-questions',
+'/story-answers',
+];
 
 routes.forEach(route => {
   const dir = `./app${route}`;

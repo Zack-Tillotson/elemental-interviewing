@@ -11,6 +11,9 @@ function App() {
     <Provider store={store()}>
       <Page>
         <Route path="/" exact component={Homepage} />
+        <Route path="/introduction/" exact component={() => 'introduction'} />
+        <Route path="/elemental-questions/" exact component={() => '3 elemental questions'} />
+        <Route path="/story-answers/" exact component={() => 'story answers'} />
         <Route path="/about-us/" exact component={() => 'about us'} />
       </Page>
     </Provider>
