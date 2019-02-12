@@ -2,8 +2,23 @@
 
 body {
   font-family: $content-font-family;
+  font-weight: $content-font-weight;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $header-font-family;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: $color-brand-black;
+}
+
+.link--decorated {
+  text-decoration: underline;
+}
+
+.content {
+  max-width: $content-max-width;
+  margin: 0 auto;
 }

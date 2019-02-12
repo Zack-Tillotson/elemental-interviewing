@@ -5,11 +5,18 @@ $color-brand-secondary: #333044;
 $color-brand-black: #390c09;
 $color-brand-white: #ffffff;
 
-$content-font-family: Lora, sans-serif;
+$content-font-family: "Roboto Slab", sans-serif;
+$content-font-weight: 100;
 
-$header-font-family: Lora, sans-serif;
+$header-font-family: Rubik, sans-serif;
 
 $dark-background-text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+
+$breakpoint-large: 74rem;
+$breakpoint-medium: 50rem;
+$breakpoint-small: 30rem;
+
+$content-max-width: 72rem;
 
 /* partials */
 

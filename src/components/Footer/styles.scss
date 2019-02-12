@@ -2,4 +2,38 @@
 
 footer {
   @extend %div-dark-primary;
+  padding: 1rem 0 6rem 0;
+  text-align: center;
+  font-size: 1.75rem;
+
+  a, a:visited {
+    color: $color-brand-white;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin: 3rem 0;
+  }
+
+  .topics-list {
+
+    li {
+      display: inline-block;
+      margin: .25rem 0;
+      line-height: 3rem;
+
+      :before {
+        content: '•';
+        color: #75150e;
+        font-size: 2rem;
+        margin: 0 1rem;
+      }
+    }
+  }
+
+  .by-line {
+    margin-top: 5rem;
+    font-size: 1rem;
+  }
 }

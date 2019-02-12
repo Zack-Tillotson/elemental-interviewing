@@ -6,7 +6,7 @@ import './styles';
 
 const Homepage = function({children}) {
   return (
-    <div>
+    <div className="content">
       <h1>Element Interviewing</h1>
       {children}
     </div>
