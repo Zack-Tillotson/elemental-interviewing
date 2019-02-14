@@ -8,24 +8,18 @@ const template = Handlebars.compile(source);
 
 require('./app/build');
 
-const routes = [
-'',
-'/about-us',
-'/introduction',
-'/elemental-questions',
-'/story-answers',
-];
+const routes = require('./src/routes');
 
-routes.forEach(route => {
-  const dir = `./app${route}`;
+routes.forEach(({path}) => {
+  const dir = `./app${path}`;
   if (!fs.existsSync(dir)){
     fs.mkdirSync(dir);
   }
 
-  const routeHtml = global.renderApp(route);
+  const routeHtml = global.renderApp(path);
 
   const fileContent = template({appHtml: routeHtml});
-  const fileName = `${dir}/index.html`;
+  const fileName = `${dir}index.html`;
   fs.writeFile(fileName, fileContent, function(err) {
     if(err) {
         return console.log('x', fileName, err);

@@ -1,5 +1,10 @@
 @import 'src/_vars';
 
+/* XXX */
+img {
+  max-width: 90vw;
+}
+
 body {
   font-family: $content-font-family;
   font-weight: $content-font-weight;
@@ -7,6 +12,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $header-font-family;
+  margin: 1rem 0;
 }
 
 a, a:visited {
@@ -21,4 +27,6 @@ a, a:visited {
 .content {
   max-width: $content-max-width;
   margin: 0 auto;
+
+  font-size: 1.5rem;
 }

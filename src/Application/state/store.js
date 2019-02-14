@@ -13,7 +13,7 @@ if(__DEBUG__) {
   middleware.unshift(createLogger());
 }
 
-export default function configureStore(initialState) {
+function configureStore(initialState) {
   const store = createStore(rootReducer, applyMiddleware(...middleware), initialState);
 
   // Hot reload reducers (requires Webpack or Browserify HMR to be enabled)
@@ -25,3 +25,5 @@ export default function configureStore(initialState) {
 
   return store;
 }
+
+export default configureStore();

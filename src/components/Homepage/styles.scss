@@ -1,0 +1,13 @@
+@import 'src/_vars';
+
+.ordered-list--important {
+  font-weight: bold;
+  list-style: decimal;
+
+  max-width: 15rem;
+  padding: 1rem;
+  margin: 3rem auto;
+  line-height: 2rem;
+  color: $color-brand-primary;
+
+}

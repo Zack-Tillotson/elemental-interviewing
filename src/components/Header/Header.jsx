@@ -1,11 +1,13 @@
 import React from 'react';
 import styles from './styles';
 
-import {Link} from 'react-router-dom';
+import {Link, withRouter} from 'react-router-dom';
 
-export default function Header({preferencesOpen}) {
+import routes from 'routes';
+
+function Header({preferencesOpen, location}) {
   return (
-    <header>
+    <header className="page-header">
       <div className="logo">
         <Link to="/">
           <figure role="presentation">
@@ -16,52 +18,25 @@ export default function Header({preferencesOpen}) {
       </div>
       <nav>
         <ul>
-          <li>
-            <Link to="/introduction/" className="nav-link">
-              <figure role="presentation">
-                <img className="nav-link__logo" src="/assets/fire.png" />
-                <figcaption role="presentation">
-                  <h2>Introduction</h2>
-                  <p>Anyone can interview well</p>
-                </figcaption>
-              </figure>
-            </Link>
-          </li>
-          <li>
-            <Link to="/elemental-questions/" className="nav-link">
-              <figure role="presentation">
-                <img className="nav-link__logo" src="/assets/water.png" />
-                <figcaption role="presentation">
-                  <h2>Questions</h2>
-                  <p>The 3 Elemental questions</p>
-                </figcaption>
-              </figure>
-            </Link>
-          </li>
-          <li>
-            <Link to="/story-answers" className="nav-link">
-              <figure role="presentation">
-                <img className="nav-link__logo" src="/assets/wind.png" />
-                <figcaption role="presentation">
-                  <h2>Answers</h2>
-                  <p>Using stories</p>
-                </figcaption>
-              </figure>
-            </Link>
-          </li>
-          <li>
-            <Link to="/about-us/" className="nav-link">
-              <figure role="presentation">
-                <img className="nav-link__logo" src="/assets/plant.png" />
-                <figcaption role="presentation">
-                  <h2>About Us</h2>
-                  <p>Follow this strategy, get a job!</p>
-                </figcaption>
-              </figure>
-            </Link>
-          </li>
+          {routes
+            .filter(route => !route.isNavExcluded)
+            .map(route =>
+              <li key={route.path}>
+                <Link to={route.path} className={`nav-link ${route.path === location.pathname ? 'route--active' : ''}`}>
+                  <figure role="presentation">
+                    <img className="nav-link__logo" src={route.icon} />
+                    <figcaption role="presentation">
+                      <h2>{route.title}</h2>
+                      <p>{route.subtitle}</p>
+                    </figcaption>
+                  </figure>
+                </Link>
+              </li>
+            )}
         </ul>
       </nav>
     </header>
   );
 }
+
+export default withRouter(Header);

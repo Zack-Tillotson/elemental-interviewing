@@ -1,4 +1,40 @@
+@import 'src/_vars';
+
 .main-body {
   background: #f0f0f0;
   min-height: 75vh;
+
+  header {
+    @extend %div-dark-primary;
+
+    padding: 2rem 1rem;
+
+    h1 {
+      font-size: 3rem;
+
+      .preline {
+        display: block;
+        font-family: $content-font-family;
+        font-size: 1.25rem;
+        margin-bottom: .75rem;
+      }
+    }
+
+    .bragging {
+      font-size: 1.5rem;
+      font-style: italic;
+      margin-left: calc(6rem - (1.2vw));
+      margin-top: 2rem;
+      width: 75%;
+    }
+  }
+
+  .content {
+    padding: 1rem;
+  }
+
+  .content-headline {
+    font-size: 3rem;
+    margin: 3rem;
+  }
 }
