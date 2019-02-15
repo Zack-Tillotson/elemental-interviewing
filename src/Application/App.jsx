@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import store from './state/store';
 
 import ScrollToTop from './ScrollToTop';
+import PageTitle from './PageTitle';
 
 import Page from '../components/Page';
 import Homepage from '../components/Homepage';
@@ -33,6 +34,7 @@ function App() {
             component={componentMap[route.component]} />
         )}
         <ScrollToTop />
+        <PageTitle />
       </Page>
     </Provider>
   );

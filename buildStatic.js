@@ -11,15 +11,16 @@ require('./app/build');
 
 const routes = require('./src/routes');
 
-routes.forEach(({path}) => {
+routes.forEach(({title, subtitle, path}) => {
   const dir = `./app${path}`;
   if (!fs.existsSync(dir)){
     fs.mkdirSync(dir);
   }
 
   const routeHtml = global.renderApp(path);
+  const routeTitle = `${title} - ${subtitle}`
 
-  const fileContent = template({...config, appHtml: routeHtml});
+  const fileContent = template({...config, appHtml: routeHtml, pageTitle: routeTitle});
   const fileName = `${dir}index.html`;
   fs.writeFile(fileName, fileContent, function(err) {
     if(err) {
