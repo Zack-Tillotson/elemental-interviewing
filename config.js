@@ -1,3 +1,3 @@
 module.exports = {
-  analyticsTagId: 'Replace With Real ID',
+  analyticsTagId: 'UA-33622205-10',
 };
