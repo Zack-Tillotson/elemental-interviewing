@@ -70,6 +70,8 @@ header.page-header {
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: 9;
+    text-shadow: none;
 
     @media(min-width: $breakpoint-medium) {
       position: relative;
@@ -131,7 +133,7 @@ header.page-header {
       }
 
       h2 {
-        font-size: .75rem;
+        font-size: 1.25rem;
         font-weight: 600;
 
         @media(min-width: $breakpoint-medium) {
