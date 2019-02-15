@@ -30,3 +30,19 @@ a, a:visited {
 
   font-size: 1.5rem;
 }
+
+p {
+  margin-top: 1.5rem;
+}
+
+hr {
+  max-width: $content-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.bold {
+  font-weight: bold;
+}

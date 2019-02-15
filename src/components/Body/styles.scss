@@ -1,13 +1,13 @@
 @import 'src/_vars';
 
 .main-body {
-  background: #f0f0f0;
+  background: #ffffff;
   min-height: 75vh;
 
   header {
     @extend %div-dark-primary;
 
-    padding: 2rem 1rem;
+    padding: 0 1rem 2rem 1rem;
 
     h1 {
       font-size: 3rem;
@@ -29,12 +29,16 @@
     }
   }
 
+  section {
+    margin-top: 5rem;
+  }
+
   .content {
-    padding: 1rem;
+    padding: 0 1rem;
   }
 
   .content-headline {
     font-size: 3rem;
-    margin: 3rem;
+    margin: 3rem 0;
   }
 }

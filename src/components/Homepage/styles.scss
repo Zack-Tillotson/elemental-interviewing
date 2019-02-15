@@ -4,10 +4,10 @@
   font-weight: bold;
   list-style: decimal;
 
-  max-width: 15rem;
-  padding: 1rem;
-  margin: 3rem auto;
-  line-height: 2rem;
+  font-size: calc(1.75rem + .2vw);
   color: $color-brand-primary;
 
+  @media(min-width: $breakpoint-large) {
+
+  }
 }

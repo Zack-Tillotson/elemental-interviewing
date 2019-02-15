@@ -5,6 +5,7 @@ const Handlebars = require('handlebars');
 
 const source = fs.readFileSync('./app/template.html', 'utf8');
 const template = Handlebars.compile(source);
+const config = require('./config.js');
 
 require('./app/build');
 
@@ -18,7 +19,7 @@ routes.forEach(({path}) => {
 
   const routeHtml = global.renderApp(path);
 
-  const fileContent = template({appHtml: routeHtml});
+  const fileContent = template({...config, appHtml: routeHtml});
   const fileName = `${dir}index.html`;
   fs.writeFile(fileName, fileContent, function(err) {
     if(err) {

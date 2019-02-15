@@ -8,7 +8,6 @@ const Interview = function({children}) {
   return (
     <div className="content">
       <h1>Interview</h1>
-      <img src="//proxy.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.o1kAzONEY55YZ6cLj5WIzgHaEK%26pid%3D15.1&f=1" />
       <h2>Tell me about yourself</h2>
       <p>i.e. "Why should we hire you for this position"? This should be 4-5 sentences that you can give without hesitation, definately prepare and practice this answer.</p>
       <h2>Technical questions</h2>
