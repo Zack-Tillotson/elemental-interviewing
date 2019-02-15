@@ -25,6 +25,7 @@ export default function() {
         <p className="by-line">
           Written with React & Redux, using a static site generator. Code can be found on GitHub: <a className="link--decorated" href="https://github.com/Zack-Tillotson/elemental-interviewing">Elemental Interviewing Repository</a>
         </p>
+        <p>Icon made from <a href="http://www.onlinewebfonts.com/icon">Icon Fonts</a> is licensed by CC BY 3.0</p>
       </div>
     </footer>
   );

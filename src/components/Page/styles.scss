@@ -1,10 +1,5 @@
 @import 'src/_vars';
 
-/* XXX */
-img {
-  max-width: 90vw;
-}
-
 body {
   font-family: $content-font-family;
   font-weight: $content-font-weight;
@@ -45,4 +40,17 @@ hr {
 
 .bold {
   font-weight: bold;
+}
+
+section{
+  position: relative;
+}
+
+.center-image {
+  max-width: 75%;
+  margin: 0 auto;
+
+  img {
+    width: 100%;
+  }
 }

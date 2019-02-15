@@ -1,7 +1,7 @@
 /* base vars */
 
 $color-brand-primary: #c7372a;
-$color-brand-secondary: #333044;
+$color-brand-secondary: #2781c7;
 $color-brand-black: #390c09;
 $color-brand-white: #ffffff;
 $color-brand-gray: #cccccc;
@@ -24,9 +24,19 @@ $content-max-width: 98rem;
 %div-dark {
   color: $color-brand-white;
   text-shadow: $dark-background-text-shadow;
+
+  a, a:visited {
+    color: $color-brand-white;
+  }
 }
 
 %div-dark-primary {
   @extend %div-dark;
   background: $color-brand-primary;
+}
+
+%div-dark-secondary {
+  @extend %div-dark;
+  background: $color-brand-secondary;
+  background: linear-gradient($color-brand-secondary 40%, darken($color-brand-secondary, 25%) 100%)
 }
