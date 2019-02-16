@@ -24,6 +24,23 @@ a, a:visited {
   margin: 0 auto;
 
   font-size: 1.5rem;
+
+  &--two-column {
+    display: flex;
+    flex-flow: row wrap;
+
+    .column__one {
+      flex: 0;
+    }
+
+    .column__two {
+      flex: 1;
+    }
+  }
+
+  &--mini-one-column {
+    max-width: $breakpoint-medium;
+  }
 }
 
 p {

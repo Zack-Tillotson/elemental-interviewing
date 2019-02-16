@@ -146,6 +146,7 @@ header.page-header {
         font-style: italic;
         margin: 1rem 0;
         display: none;
+        font-weight: 400;
 
         @media(min-width: $breakpoint-large) {
           display: block;

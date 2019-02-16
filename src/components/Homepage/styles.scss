@@ -6,14 +6,57 @@
 
   font-size: calc(1.75rem + .2vw);
   color: $color-brand-primary;
-
-  @media(min-width: $breakpoint-large) {
-
-  }
 }
 
 .extra-spaced {
   margin-top: 3rem;
   margin-bottom: 3rem;
   text-align: center;
+}
+
+.image-column {
+  text-align: center;
+}
+
+.process-overview {
+  display: flex;
+  flex-flow: row wrap;
+
+  li {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 3rem;
+  }
+
+  figure {
+    flex: 0;
+    min-width: 4rem;
+    width: 25%;
+    margin: .5rem;
+
+    svg {
+      fill: $color-brand-white;
+      filter: drop-shadow(2px 2px 2px black);
+    }
+  }
+
+  h3 {
+    order: -1;
+    width: 100%;
+    font-size: 1.75rem;
+  }
+
+  p {
+    flex: 1;
+    margin: 0;
+  }
+
+  a {
+    width: 100%;
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: right;
+    margin-top: 1rem;
+  }
+
 }

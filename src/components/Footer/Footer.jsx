@@ -20,12 +20,11 @@ export default function() {
           <li><a href="http://zackandtanya.com/">Wedding</a></li>
         </ul>
         <p className="by-line">
-          Happily created by <a className="link--decorated" href="http://ZacheryTillotson.com">Zack Tillotson</a>. I wish you luck!
+          Written with React & Redux, using a custom static site generator. Code can be found on GitHub: <a className="link--decorated" href="https://github.com/Zack-Tillotson/elemental-interviewing">Elemental Interviewing Repository</a>. Some icons made from <a href="http://www.onlinewebfonts.com/icon">Icon Fonts</a> and are licensed under CC BY 3.0.
         </p>
         <p className="by-line">
-          Written with React & Redux, using a static site generator. Code can be found on GitHub: <a className="link--decorated" href="https://github.com/Zack-Tillotson/elemental-interviewing">Elemental Interviewing Repository</a>
+          Created by <a className="link--decorated" href="http://ZacheryTillotson.com">Zack Tillotson</a>. I enjoy the interview "game" and made this site because I love helping people. Good luck!
         </p>
-        <p>Icon made from <a href="http://www.onlinewebfonts.com/icon">Icon Fonts</a> is licensed by CC BY 3.0</p>
       </div>
     </footer>
   );

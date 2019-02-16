@@ -2,7 +2,7 @@
 
 footer {
   @extend %div-dark-primary;
-  padding: 1rem 0 6rem 0;
+  padding: 1rem 1rem 8rem 1rem;
   text-align: center;
   font-size: 1.5rem;
 
@@ -33,7 +33,7 @@ footer {
   }
 
   .by-line {
-    margin-top: 5rem;
+    margin-top: 2rem;
     font-size: 1rem;
   }
 }

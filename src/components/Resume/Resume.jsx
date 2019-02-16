@@ -7,7 +7,7 @@ import './styles';
 const Resume = function({children}) {
   return (
     <div className="content">
-      <h1>Resume</h1>
+      <h1>Résumé</h1>
       <h2>Two objectives</h2>
       <p>Used by managers & recruiters to identify those with related skillsets</p>
       <p>Used by interviewers to drive interview</p>

@@ -20,7 +20,7 @@ let cssLoader = isProdBuild ? {
 const config = {
   mode: isProdBuild ? 'production' : 'development',
   resolve: {
-    modules: ['node_modules', './src'],
+    modules: ['node_modules', './src', './static'],
     extensions: ['.js', '.jsx', '.scss']
   },
   node: {
@@ -43,6 +43,10 @@ const config = {
           { loader: 'css-loader' },
           { loader: 'sass-loader' },
         ],
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-inline-loader',
       },
     ]
   },
