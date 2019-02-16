@@ -3,6 +3,8 @@ import styles from './styles';
 
 import {Link, withRouter} from 'react-router-dom';
 
+import svgLogo from 'assets/logo.svg';
+
 import routes from 'routes';
 
 function Header({preferencesOpen, location}) {
@@ -11,7 +13,7 @@ function Header({preferencesOpen, location}) {
       <div className="logo">
         <Link to="/">
           <figure role="presentation">
-            <img src="/assets/Logo.svg" alt="Elemental Interviewing" />
+            <span dangerouslySetInnerHTML={{__html: svgLogo}} />
             <figcaption role="presentation">Elemental Interviewing</figcaption>
           </figure>
         </Link>

@@ -39,7 +39,7 @@ header.page-header {
       flex-flow: row nowrap;
       vertical-align: middle;
 
-      img {
+      svg {
         height: 1.25rem;
 
         @media(min-width: $breakpoint-medium) {
