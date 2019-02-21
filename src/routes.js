@@ -11,9 +11,21 @@ module.exports = [{
   subtitle: 'Your foot in the door',
   icon: '/assets/fire.png',
 }, {
+  path: '/phone-screen/',
+  component: 'PhoneScreen',
+  title: 'Phone Screen',
+  subtitle: 'Just trivia',
+  icon: '/assets/water.png',
+}, {
   path: '/interview/',
   component: 'Interview',
   title: 'Interview',
   subtitle: 'It\'s Story time',
   icon: '/assets/water.png',
+}, {
+  path: '/follow-up/',
+  component: 'FollowUp',
+  title: 'Follow Up',
+  subtitle: 'Seal the deal',
+  icon: '/assets/plant.png',
 }];

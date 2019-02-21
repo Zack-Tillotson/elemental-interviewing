@@ -1,7 +1,7 @@
 @import 'src/_vars';
 
 .main-body {
-  background: #ffffff;
+  background: #f0f2f2;
   min-height: 75vh;
 
   header {
@@ -11,6 +11,7 @@
 
     h1 {
       font-size: 3rem;
+      text-shadow: 2px 2px 5px rgb(8, 46, 117);
 
       .preline {
         display: block;

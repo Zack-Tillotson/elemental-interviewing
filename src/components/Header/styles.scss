@@ -4,7 +4,7 @@ header.page-header {
   @extend %div-dark-primary;
 
   position: relative;
-  padding: .5rem 1rem;
+  margin: .5rem 1rem;
   min-height: 2rem;
 
   @media(min-width: $breakpoint-medium) {
@@ -65,15 +65,54 @@ header.page-header {
     }
   }
 
-  nav {
+  .menu-trigger {
+    position: absolute;
+    right: 1rem;
+    top: 0rem;
+    border: solid 2px $color-brand-white;
+    border-radius: 3px;
+    padding: .5rem;
+
+    @media(min-width: $breakpoint-medium) {
+      display: none;
+    }
+  }
+
+  .close-trigger {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    color: $color-brand-white;
+    margin-right: 1rem;
+    border: solid 2px $color-brand-white;
+    border-radius: 3px;
+    padding: 0 .5rem;
+    background: none;
+    font-size: 2rem;
+
+    @media(min-width: $breakpoint-medium) {
+      display: none;
+    }
+  }
+
+  .main-nav {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
+    top: 0;
     z-index: 9;
     text-shadow: none;
+    display: none;
+    background: $color-brand-primary;
+
+    &--expanded {
+      display: block;
+
+    }
 
     @media(min-width: $breakpoint-medium) {
+      display: block;
       position: relative;
       float: left;
       bottom: auto;
@@ -88,44 +127,46 @@ header.page-header {
 
     ul {
       display: flex;
-      flex-flow: row nowrap;
+      flex-flow: column nowrap;
+      margin-top: 3rem;
+
+      @media(min-width: $breakpoint-medium) {
+        margin-top: 0;
+        flex-direction: row;
+        text-align: center;
+      }
     }
 
     a, a:visited {
-      color: $color-brand-black;
-      text-decoration: underline;
-
       @media(min-width: $breakpoint-medium) {
-        color: $color-brand-white;
-        text-decoration: none;
       }
     }
 
 
     li {
-      display: inline-block;
-      text-align: center;
-      padding: .5rem;
-      flex: 1;
-      background: $color-brand-white;
-      border-top: solid 1px $color-brand-black;
+      padding: 1rem 2rem;
+      text-shadow: 1px 1px 1px $color-brand-black;
+      border-bottom: solid 1px $color-brand-gray;
 
       @media(min-width: $breakpoint-medium) {
+        display: inline-block;
+        flex: 1;
         background: $color-brand-primary;
         border: none;
       }
 
       .nav-link.route--active {
         color: $color-brand-black;
+        text-shadow: none;
       }
 
 
       img {
-        display: block;
-        width: 1.5rem;
         margin: .25rem auto;
+        display: none;
 
         @media(min-width: $breakpoint-medium) {
+          display: block;
           width: 3rem;
           height: 3rem;
           margin: 1rem auto;
@@ -133,7 +174,7 @@ header.page-header {
       }
 
       h2 {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
         font-weight: 600;
 
         @media(min-width: $breakpoint-medium) {
