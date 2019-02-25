@@ -19,7 +19,7 @@ const Homepage = function({children}) {
         </div>
         <div className="column__two">
           <figure role="presentation">
-            <img className="nav-link__logo" src="https://res.cloudinary.com/indysigner/image/upload/v1540550092/SmashingConf/sf19-cat-circle.svg" />
+            <img className="nav-link__logo" src="/assets/mascot.png" />
           </figure>
         </div>
       </header>

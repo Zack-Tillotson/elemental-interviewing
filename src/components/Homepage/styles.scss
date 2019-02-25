@@ -55,9 +55,14 @@
 
 .highlight {
   background: $color-brand-white;
-  border: solid 2px $color-brand-black;
-  border-radius: 5px;
+  border-top: solid 2px $color-brand-black;
+  border-bottom: solid 2px $color-brand-black;
   box-shadow: 0px 0px 5px $color-brand-secondary;
+
+  @media(min-width: $breakpoint-medium) {
+    border: solid 2px $color-brand-black;
+    border-radius: 5px;
+  }
 }
 
 .process-overview {
