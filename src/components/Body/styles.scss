@@ -96,6 +96,7 @@
     grid-template-areas:
       "summary title title title"
       "summary content content content";
+    grid-column-gap: 1rem;
 
     .sbs__summary {
       grid-area: summary;

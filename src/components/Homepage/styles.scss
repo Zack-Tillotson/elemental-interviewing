@@ -59,6 +59,7 @@
   border-bottom: solid 2px $color-brand-black;
   padding: 3rem 1rem;
   box-shadow: 0px 0px 5px $color-brand-secondary;
+  margin-top: 3rem;
 
   @media(min-width: $breakpoint-large) {
     border: solid 2px $color-brand-black;
@@ -96,8 +97,6 @@
     margin-bottom: 4rem;
     width: 100%;
     font-size: 1.75rem;
-    color: red;
-    text-shadow: 1px 1px 3px $color-brand-black;
   }
 
   p {
