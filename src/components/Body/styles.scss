@@ -5,10 +5,10 @@
   min-height: 75vh;
   position: relative;
   top: -1px;
+  clear: both;
 
   header {
     @extend %div-dark-primary;
-
     padding: 0 4rem 2rem 4rem;
 
     h1 {
@@ -57,20 +57,58 @@
 
   .sbs__summary {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
 
     figure {
       max-width: 20rem;
       min-width: 6rem;
       flex: 1;
+
+      svg {
+        max-height: 15rem;
+      }
     }
     .sbs-summary__text {
       flex: 1;
-    }
+      font-size: 1rem;
 
+      ol li {
+        line-height: 2rem;
+
+        &:before {
+          content: ' ';
+          display: inline-block;
+          width: 1rem;
+          height: 1rem;
+          background: $color-brand-white;
+          border: solid 1px $color-brand-black;
+          box-shadow: 2px 2px 2px $color-brand-gray;
+          margin-right: 1rem;
+        }
+      }
+    }
   }
 
   @media(min-width: $breakpoint-large) {
+    padding-top: calc(.5rem + 3vw);
     display: grid;
+    grid-template-columns: 22rem 22rem auto 22rem;
+    grid-template-areas:
+      "summary title title title"
+      "summary content content content";
+
+    .sbs__summary {
+      grid-area: summary;
+    }
+
+    .sbs__title {
+      grid-area: title;
+      font-size: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .sbs__content {
+      grid-area: content;
+    }
   }
 }
