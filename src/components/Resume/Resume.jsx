@@ -41,6 +41,9 @@ const Resume = function({children}) {
         <p>One of the best heuristics for if an employee is going to work out is number of errors on a resume</p>
         <p>Length isn't that important, but minimum of 1 full page and maximum of 2 pages is a good guideline</p>
       </div>
+      <div className="sbs__content">
+        <Link to="/phone-screen/">Learn more →</Link>
+      </div>
     </div>
   );
 }

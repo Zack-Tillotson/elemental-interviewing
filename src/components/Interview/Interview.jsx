@@ -19,6 +19,9 @@ const Interview = function({children}) {
       <h2>Your questions for them</h2>
       <p>Start a conversation, don't check a box.</p>
       <p>Use the "First Date" strategy - ask questions which let them talk about things they like.</p>
+      <section className="content">
+        <Link to="/follow-up/">Learn More →</Link>
+      </section>
     </div>
   );
 }

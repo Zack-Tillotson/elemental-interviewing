@@ -9,12 +9,14 @@ import PageTitle from './PageTitle';
 import Page from '../components/Page';
 import Homepage from '../components/Homepage';
 import Resume from '../components/Resume';
+import PhoneScreen from '../components/PhoneScreen';
 import Interview from '../components/Interview';
 import FollowUp from '../components/FollowUp';
 
 const componentMap = {
   'Homepage': Homepage,
   'Resume': Resume,
+  'PhoneScreen': PhoneScreen,
   'Interview': Interview,
   'FollowUp': FollowUp,
   undefined: () => 'TODO',
