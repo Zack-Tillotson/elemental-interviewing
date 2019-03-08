@@ -18,7 +18,7 @@ routes.forEach(({title, subtitle, path}) => {
   }
 
   const routeHtml = global.renderApp(path);
-  const routeTitle = `Elemental Interviewing - ${title}`
+  const routeTitle = `${title} | Elemental Interviewing`;
 
   const fileContent = template({...config, appHtml: routeHtml, pageTitle: routeTitle});
   const fileName = `${dir}index.html`;

@@ -54,12 +54,13 @@
 }
 
 .highlight {
-  background: $color-brand-white;
+  @extend %div-dark-secondary;
   border-top: solid 2px $color-brand-black;
   border-bottom: solid 2px $color-brand-black;
+  padding: 3rem 1rem;
   box-shadow: 0px 0px 5px $color-brand-secondary;
 
-  @media(min-width: $breakpoint-medium) {
+  @media(min-width: $breakpoint-large) {
     border: solid 2px $color-brand-black;
     border-radius: 5px;
   }

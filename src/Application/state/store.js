@@ -1,6 +1,7 @@
-import { createStore, applyMiddleware, combineReducers, compose } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
-import { createLogger } from 'redux-logger';
+import { composeWithDevTools } from 'redux-devtools-extension';
+
 import rootReducer from './rootReducer';
 
 const sagaMiddleware = createSagaMiddleware();
@@ -9,14 +10,9 @@ const middleware = [
   sagaMiddleware,
 ];
 
-if(__DEBUG__) {
-  middleware.unshift(createLogger());
-}
+function configureStore() {
+  const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(...middleware)));
 
-function configureStore(initialState) {
-  const store = createStore(rootReducer, applyMiddleware(...middleware), initialState);
-
-  // Hot reload reducers (requires Webpack or Browserify HMR to be enabled)
   if (module.hot) {
     module.hot.accept('./rootReducer', () =>
       store.replaceReducer(require('./rootReducer').default)

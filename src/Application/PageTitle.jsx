@@ -8,7 +8,7 @@ class PageTitle extends Component {
       const config = routes.find(route => route.path === this.props.location.pathname);
       if(!config) return;
 
-      document.title = `Elemental Interviewing - ${config.title}`;
+      document.title = `${config.title} | Elemental Interviewing`;
     }
   }
 
