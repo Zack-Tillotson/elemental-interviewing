@@ -97,6 +97,25 @@
     }
   }
 
+  .sbs__footer {
+    grid-area: footer;
+    padding-top: 3rem;
+    display: block;
+    text-align: center;
+
+    a {
+      font-weight: bold;
+      font-size: 1.75rem;
+      display: block;
+
+      &:link, &:visited {
+        color: $color-brand-secondary;
+        text-shadow: none;
+        font-family: $header-font-family;
+      }
+    }
+  }
+
   @media(min-width: $breakpoint-large) {
     padding-top: calc(.5rem + 3vw);
     display: grid;
@@ -122,21 +141,6 @@
 
     .sbs__footer {
       grid-area: footer;
-      padding-top: 3rem;
-      display: block;
-      text-align: center;
-
-      a {
-        font-weight: bold;
-        font-size: 1.75rem;
-        display: block;
-
-        &:link, &:visited {
-          color: $color-brand-secondary;
-          text-shadow: none;
-          font-family: $header-font-family;
-        }
-      }
     }
   }
 }
