@@ -11,7 +11,7 @@ require('./app/build');
 
 const routes = require('./src/routes');
 
-routes.forEach(({title, subtitle, path}) => {
+routes.forEach(({title, subtitle, path, description}) => {
   const dir = `./app${path}`;
   if (!fs.existsSync(dir)){
     fs.mkdirSync(dir);
@@ -20,7 +20,12 @@ routes.forEach(({title, subtitle, path}) => {
   const routeHtml = global.renderApp(path);
   const routeTitle = `${title} | Elemental Interviewing`;
 
-  const fileContent = template({...config, appHtml: routeHtml, pageTitle: routeTitle});
+  const fileContent = template({
+    ...config,
+    appHtml: routeHtml,
+    pageTitle: routeTitle,
+    description,
+  });
   const fileName = `${dir}index.html`;
   fs.writeFile(fileName, fileContent, function(err) {
     if(err) {
