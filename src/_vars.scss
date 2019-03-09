@@ -13,11 +13,11 @@ $header-font-family: "Permanent Marker", sans-serif;
 
 $dark-background-text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
 
-$breakpoint-large: 100rem;
+$breakpoint-large: 75rem;
 $breakpoint-medium: 50rem;
 $breakpoint-small: 30rem;
 
-$content-max-width: 98rem;
+$content-max-width: $breakpoint-large - 2rem;
 
 /* partials */
 

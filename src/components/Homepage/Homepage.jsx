@@ -16,7 +16,7 @@ const Homepage = function({children}) {
             <h1>
               Elemental
             </h1>
-            <p className="bragging">A proven step by step guide to a successful job hunt. Interviewing is a game - learn the rules, practice the skills, & get a job.</p>
+            <p className="bragging">A proven step by step guide to a successful job hunt.</p>
           </div>
           <div className="column__two">
             <figure role="presentation">
@@ -25,14 +25,16 @@ const Homepage = function({children}) {
           </div>
         </div>
       </header>
-      <section className="content highlight">
-        <h2 className="content-headline">The 3 Elemental questions to get hired</h2>
-        <h3 className="ordered-list--important">1. Can you do the job?</h3>
-        <p>Are you technical capable of doing this job? Are you experienced enough? Can you learn the aspects of the job you don't already know?</p>
-        <h3 className="ordered-list--important">2. Will you do the job?</h3>
-        <p>Are you motivated and professional? Will you show up on time? Are you going to take a nap or surf the web instead of working?</p>
-        <h3 className="ordered-list--important">3. Are you annoying?</h3>
-        <p>Are we going to get along? How do you handle stress? Are you high maintinance? Do our personallities clash?</p>
+      <section className="highlight">
+        <div className="content">
+          <h2 className="content-headline">There are only 3 elemental questions</h2>
+          <h3 className="ordered-list--important">1. Can you do the job?</h3>
+          <p>Are you technical capable of doing this job? Are you experienced enough? Can you learn the aspects of the job you don't already know?</p>
+          <h3 className="ordered-list--important">2. Will you do the job?</h3>
+          <p>Are you motivated and professional? Will you show up on time? Are you going to take a nap or surf the web instead of working?</p>
+          <h3 className="ordered-list--important">3. Are you annoying?</h3>
+          <p>Are we going to get along? How do you handle stress? Are you high maintinance? Do our personallities clash?</p>
+        </div>
       </section>
       <section className="content content--two-column">
         <div className="column__two">
@@ -42,26 +44,43 @@ const Homepage = function({children}) {
         </div>
       </section>
       <section className="content">
-        <h2>Everything reduces to these 3 Elemental questions</h2>
+        <h2>All other questions reduce to the 3 Elemental questions</h2>
         <p>For example, they'll look at your Résumé for the industry "buzzwords" that show you'll be able to do the job - answering question #1 "Can you do the job?".</p>
         <p>Another example, what does it say if you are a few minutes late for an interview? Maybe don't actually care about this job? Answering question #2 "Will you do the job?"</p>
         <p>Next we'll go over each step of the job hunt process.</p>
       </section>
       <section className="content process-overview">
-        <figure role="presentation" dangerouslySetInnerHTML={{__html: svgResume}} />
-        <h3>First step: Create a Résumé</h3>
-        <p>A Résumé is two things.</p>
+        <h3>The stages of the hiring process</h3>
         <ol>
           <li>
-            <div className="bold">1. How you land interviews</div>
-            Managers will look at your résumé for (literally) 5 seconds, it needs to tell them something in that time.
+            <Link to="/resume/" className="process-overview__stage">
+              <span className="process-overview__num">1. </span>
+              <span className="process-overview__text">Create a Résumé</span>
+              <span className="process-overview__next">→</span>
+            </Link>
           </li>
           <li>
-            <div className="bold">2. Sets agenda during interviews</div>
-            An interviewer will look over your resume for about 60 seconds. They'll ask you to give more detail about what they see, so your résumé should contain the things you want to talk about.
+            <Link to="/phone-screen/" className="process-overview__stage">
+              <span className="process-overview__num">2. </span>
+              <span className="process-overview__text">The phone screen</span>
+              <span className="process-overview__next">→</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/interview/" className="process-overview__stage">
+              <span className="process-overview__num">3. </span>
+              <span className="process-overview__text">In person interviews</span>
+              <span className="process-overview__next">→</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/follow-up/" className="process-overview__stage">
+              <span className="process-overview__num">4. </span>
+              <span className="process-overview__text">Follow up</span>
+              <span className="process-overview__next">→</span>
+            </Link>
           </li>
         </ol>
-        <Link to="/resume/">Learn more →</Link>
       </section>
     </Fragment>
   );
