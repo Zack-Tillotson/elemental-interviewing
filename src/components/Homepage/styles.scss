@@ -35,9 +35,10 @@
   }
 
   .column__two {
-
+    margin-top: 1rem;
 
     @media(min-width: $breakpoint-small) {
+      margin-top: auto;
       width: 33.33333%;
       float: left;
       max-width: 15rem;

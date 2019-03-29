@@ -14,9 +14,9 @@ const Homepage = function({children}) {
         <div className="content">
           <div className="column__one">
             <h1>
-              Elemental
+              Interviewing Simplified
             </h1>
-            <p className="bragging">A proven step by step guide to a successful job hunt.</p>
+            <p className="bragging">Learn the foundation of a successful interview: answering the 3 Elemental questions. Then learn specific step by step tips for creating a résumé, doing the phone screen, full in person interviews, and following up.</p>
           </div>
           <div className="column__two">
             <figure role="presentation">

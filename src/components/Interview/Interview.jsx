@@ -1,7 +1,6 @@
 import React from 'react';
 
 import {Link} from 'react-router-dom';
-import svg from 'assets/person.svg';
 
 import './styles';
 
@@ -9,11 +8,15 @@ const Interview = function({children}) {
   return (
     <div className="content sbs">
       <div className="sbs__summary">
-        <figure role="presentation" dangerouslySetInnerHTML={{__html: svg}} />
+        <figure role="presentation">
+          <img className="nav-link__logo" src="/assets/mascot.png" />
+        </figure>
         <div className="sbs-summary__text">
-          <h2>Interview Summary</h2>
-          <p>For the in person interview make sure to:</p>
+          <h2>Summary of the interview</h2>
+          <p>Interviewing is stressful, but preparation makes all the difference. Make sure to pratice standard questions like "Tell me about yourself". Then prepare for questions you can't predict by having a set of stories ready to answer with, these stories should represent great answers to the 3 Elemental questions. Finally be ready to interview them in turn.</p>
+          <p>In short:</p>
           <ol>
+            <li>Focus on the 3 Elemental questions</li>
             <li>Answer "tell me about yourself"</li>
             <li>Have 5+ stories</li>
             <li>Pratice using the stories to answer</li>
@@ -22,9 +25,14 @@ const Interview = function({children}) {
         </div>
       </div>
       <div className="sbs__title">
-        <h1>How to in person interview</h1>
+        <h1>How to interview</h1>
       </div>
       <div className="sbs__content">
+        <h2>Why is it so hard?</h2>
+        <p>Interviewing is the hardest part of the hiring process. It's a stressful test, you're being judged by strangers who only have a basic understanding of your skills, and it's just not something that people get to practice very often. The Elemental system helps with all of this!</p>
+        <p>After you understand the process from the employer's point of view it becomes a lot easier, in fact this stressful test transforms intp a fun game.</p>
+        <h2>Always remember the 3 Elemental questions</h2>
+        <p>All you have to do in an interview is answer the 3 Elemental questions, everything you do should be focused on that.</p>
         <h2>Tell me about yourself</h2>
         <p>i.e. "Why should we hire you for this position"? This should be 4-5 sentences that you can give without hesitation, definately prepare and practice this answer.</p>
         <h2>Technical questions</h2>

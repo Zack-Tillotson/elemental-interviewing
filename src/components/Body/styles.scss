@@ -1,15 +1,16 @@
 @import 'src/_vars';
 
 .main-body {
-  background: #f0f2f2;
+  background: $color-brand-white;
   min-height: 75vh;
   position: relative;
   top: -1px;
   clear: both;
+  padding-bottom: 3rem;
 
   header {
     @extend %div-dark-primary;
-    padding: 0 4rem 2rem 4rem;
+    padding: 0 1rem 2rem 1rem;
 
     h1 {
       font-size: 3rem;
@@ -26,14 +27,8 @@
 }
 
 .bragging {
-  font-size: 1.5rem;
   font-style: italic;
   margin-top: 2rem;
-
-  @media(min-width: $breakpoint-small) {
-    width: 75%;
-    margin-left: calc(6rem - (1.2vw));
-  }
 }
 
 .content {
@@ -62,13 +57,14 @@
   .sbs__summary {
     display: flex;
     flex-flow: column nowrap;
+    align-items: center;
 
     figure {
-      max-width: 20rem;
-      min-width: 6rem;
-      flex: 1;
+      width: 15rem;
+      flex: 0;
 
-      svg {
+      img {
+        width: 100%;
       }
     }
 
@@ -78,20 +74,25 @@
 
     .sbs-summary__text {
       flex: 1;
+      font-size: 1.25rem;
 
-      ol li {
-        line-height: 2rem;
-        font-size: 1rem;
+      ol {
+        margin-top: .5rem;
 
-        &:before {
-          content: ' ';
-          display: inline-block;
-          width: 1rem;
-          height: 1rem;
-          background: $color-brand-white;
-          border: solid 1px $color-brand-black;
-          box-shadow: 2px 2px 2px $color-brand-gray;
-          margin-right: 1rem;
+        li {
+          line-height: 2rem;
+          font-size: 1rem;
+
+          &:before {
+            content: ' ';
+            display: inline-block;
+            width: 1rem;
+            height: 1rem;
+            background: $color-brand-white;
+            border: solid 1px $color-brand-black;
+            box-shadow: 2px 2px 2px $color-brand-gray;
+            margin-right: 1rem;
+          }
         }
       }
     }

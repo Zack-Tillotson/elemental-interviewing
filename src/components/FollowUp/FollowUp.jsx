@@ -1,7 +1,6 @@
 import React from 'react';
 
 import {Link} from 'react-router-dom';
-import svg from 'assets/shake.svg';
 
 import './styles';
 
@@ -9,10 +8,13 @@ const FollowUp = function({children}) {
   return (
     <div className="content sbs">
       <div className="sbs__summary">
-        <figure role="presentation" dangerouslySetInnerHTML={{__html: svg}} />
+        <figure role="presentation">
+          <img className="nav-link__logo" src="/assets/mascot.png" />
+        </figure>
         <div className="sbs-summary__text">
-          <h2>Follow Up</h2>
-          <p>After an in person interview make sure to:</p>
+          <h2>Summary of following up</h2>
+          <p>You'll often need to follow up after an interview. Many people find awkward or think they will annoy the employer. This is not the case! Employers are busy and a follow up message can get you back on their radar.</p>
+          <p>In short:</p>
           <ol>
             <li>Wait around 4 days</li>
             <li>Be proactive</li>
