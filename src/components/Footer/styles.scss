@@ -5,6 +5,11 @@ footer {
   padding: 1rem 1rem 8rem 1rem;
   text-align: center;
 
+  .content {
+    background: none;
+    box-shadow: none;
+  }
+
   a, a:visited {
     color: $color-brand-white;
   }

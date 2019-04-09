@@ -5,8 +5,6 @@
   list-style: decimal;
 
   font-size: calc(1.75rem + .2vw);
-  color: $color-brand-primary;
-  text-shadow: 0 0 3px #000;
 }
 
 .extra-spaced {
@@ -20,6 +18,17 @@
 }
 
 .homepage__header {
+  border-top: solid 1px $color-brand-gray;
+
+  .content {
+    background: none;
+    box-shadow: none;
+  }
+
+  @media(min-width: $breakpoint-medium) {
+    border-top: none;
+  }
+
   &:before, &:after {
     content: ' ';
     display: table;
@@ -50,14 +59,14 @@
 
     img {
       width: 100%;
-      max-height: calc(100vw - 2rem);
     }
   }
 }
 
 .highlight {
-  @extend %div-dark-secondary;
-  padding: 3rem 1rem;
+  h3 {
+    color: $color-brand-primary;
+  }
 }
 
 .process-overview {

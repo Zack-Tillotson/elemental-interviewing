@@ -1,7 +1,7 @@
 @import 'src/_vars';
 
 .main-body {
-  background: $color-brand-white;
+  background: $color-brand-background;
   min-height: 75vh;
   position: relative;
   top: -1px;
@@ -13,8 +13,12 @@
     padding: 0 1rem 2rem 1rem;
 
     h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       text-shadow: 2px 2px 5px rgb(8, 46, 117);
+
+      @media(min-width: $breakpoint-small) {
+        font-size: 3rem;
+      }
 
       .preline {
         display: block;
@@ -32,7 +36,12 @@
 }
 
 .content {
-  padding: 1rem .75rem;
+  padding: 1rem 1rem;
+
+  @media(min-width: $breakpoint-small) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
 }
 
 .content-headline {
