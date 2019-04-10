@@ -1,10 +1,8 @@
 import React, {Fragment} from 'react';
 
 import {Link} from 'react-router-dom';
-import svgResume from 'assets/resume.svg';
-import svgPhone from 'assets/phone.svg';
-import svgPerson from 'assets/person.svg';
-import svgHandshake from 'assets/shake.svg';
+import svgLogo from 'assets/flamo.svg';
+
 import './styles';
 
 const Homepage = function({children}) {
@@ -20,7 +18,7 @@ const Homepage = function({children}) {
           </div>
           <div className="column__two">
             <figure role="presentation">
-              <img className="nav-link__logo" src="/assets/mascot.png" />
+              <span className="nav-link__logo" dangerouslySetInnerHTML={{__html: svgLogo}} />
             </figure>
           </div>
         </div>

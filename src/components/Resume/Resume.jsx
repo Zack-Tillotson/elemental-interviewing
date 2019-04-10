@@ -1,6 +1,7 @@
 import React from 'react';
 
 import {Link} from 'react-router-dom';
+import svgLogo from 'assets/flamo-resume.svg';
 
 import './styles';
 
@@ -9,7 +10,7 @@ const Resume = function({children}) {
     <div className="content sbs">
       <div className="sbs__summary">
         <figure role="presentation">
-          <img className="nav-link__logo" src="/assets/mascot.png" />
+          <span className="nav-link__logo" dangerouslySetInnerHTML={{__html: svgLogo}} />
         </figure>
         <div className="sbs-summary__text">
           <h2>Summary of creating a résumé</h2>
