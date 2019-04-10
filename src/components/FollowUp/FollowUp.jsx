@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {Link} from 'react-router-dom';
-import svgLogo from 'assets/flamo-phone.svg';
+import svgLogo from 'assets/flamo-offer.svg';
 
 import './styles';
 
