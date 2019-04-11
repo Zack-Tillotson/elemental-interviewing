@@ -33,19 +33,21 @@ const Homepage = function({children}) {
           <p>This question is different from the first, it is asking about your motivation and professionalism. An employer wants to know that the person they're hiring has the right attitude! For example, if a candidate is over qualified for a job they still might not be hired. Why? Because the employer might be afraid that candidate would leave soon after being hired for a better job.</p>
           <h3 className="ordered-list--important">Are you annoying?</h3>
           <p>Are we going to get along? How do you handle stress? Are you high maintinance? Do our personallities clash?</p>
+          <p>Even the best candidate might get passed on if you're not a fit in the company culture. After all, they will be around you for 2,000+ hours every year, if you annoy them they are not going to hire you.</p>
       </section>
       <section className="content">
-        <h2>That's it! Answer those questions and get hired</h2>
-        <p>Finding an employee is expensive. The employer is spending money, time, and energy to look through resumes, conduct phone screens, and do interviews. The further through the process a candidate is the more money is wasted when they pass - they'll only make money after they hire someone. This means they are incentivized to find someone.</p>
-        <p>For employers it comes down to these three elemntal questions, once they find someone who answers them correctly they will hire that person.</p>
+        <h2>Everything boils down to these 3 Elemental questions</h2>
+        <p>When you're being asked weird questions or being sent through multiple rounds of interviews it can be confusing and frustrating. How does any of this make sense? How could asking about my greatest weakness help the employer?</p>
+        <p>The key to understanding this is realizing that they actually only care about the 3 Elemental questions. Regardless of what question you're asked, what weird interview process you're asked to go through, or how you're clothing is judged, it's all because the employer is seeking to answer "Can you do the job?", "Will you do the job?" or "Do you annoy me?".</p>
+        <p>For the example above, when you're asked "What is your greatest weakness?" you should rephrase the question in your head. "Would your greatest weakness prevent you from being able to do the job?" "Would you greatest weakness make it so you wont do this job?" "Would your greatest weakness annoy me?". When you think about the question in this context it's a lot easier to answer.</p>
+        <p>For example, they'll look at your résumé for the industry "buzzwords" that show you'll be able to do the job - answering question #1 "Can you do the job?".</p>
       </section>
       <section className="content">
-        <h2>Everything in the job hunt boils down to the 3 Elemental questions</h2>
-        <p>Regardless of what question you're asked, what weird interview process you're asked to go through, or how you're clothing is judged, it's all because the employer is seeking to answer the 3 Elemental questions.</p>
-        <p>For example, they'll look at your Résumé for the industry "buzzwords" that show you'll be able to do the job - answering question #1 "Can you do the job?".</p>
-        <p>Another example, what does it say if you are a few minutes late for an interview? Maybe don't actually care about this job? Answering question #2 "Will you do the job?"</p>
-        <p>When trying to get a job the most important thing is answering these 3 Elemental questions. The rest of this site will give specific strategies and tips for your résumé, for phone screening, and for interviewing. You can follow them or not, but do remember the 3 Elemental questions, they are all that matter!</p>
-        <p>Next we'll go over strategies & tips for each step of the job hunt process.</p>
+        <h2>You have leverage in the job hunt</h2>
+        <p>Finding an employee is expensive! The employer is spending money, time, and energy to look through resumes, conduct phone screens, and do interviews. The further through the process a candidate is the more money is wasted when they pass - they'll only make money after they hire someone. All of this combines to demonstrate that companies are highly incentivized to hire a candidate.</p>
+      </section>
+      <section className="content">
+        <p>The rest of this site will give specific strategies and tips for your résumé, for phone screening, and for interviewing. You can follow them or not but remember the 3 Elemental questions are what really matter.</p>
       </section>
       <section className="content process-overview">
         <h3>The stages of the hiring process</h3>

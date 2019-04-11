@@ -9,25 +9,23 @@ import './styles';
 const Interview = function({children}) {
   return (
     <div className="content sbs">
+      <div className="sbs__title">
+        <h1>How to interview</h1>
+      </div>
       <div className="sbs__summary">
         <figure role="presentation">
           <span className="nav-link__logo" dangerouslySetInnerHTML={{__html: svgLogo}} />
         </figure>
         <div className="sbs-summary__text">
-          <h2>Summary of the interview</h2>
+          <h2>In Summary</h2>
           <p>Interviewing is stressful, but preparation makes all the difference. Make sure to pratice standard questions like "Tell me about yourself". Then prepare for questions you can't predict by having a set of stories ready to answer with, these stories should represent great answers to the 3 Elemental questions. Finally be ready to interview them in turn.</p>
           <p>In short:</p>
           <ol>
-            <li>Focus on the 3 Elemental questions</li>
-            <li>Answer "tell me about yourself"</li>
-            <li>Have 5+ stories</li>
-            <li>Pratice using the stories to answer</li>
-            <li>Have questions for them</li>
+            {['Focus on the 3 Elemental questions', 'Answer "tell me about yourself"', 'Have 5+ stories', 'Pratice using the stories to answer', 'Have questions for them'].map((word, index) => (
+              <li key={word}><input type="checkbox" id={index} /><label htmlFor={index}>{word}</label></li>
+            ))}
           </ol>
         </div>
-      </div>
-      <div className="sbs__title">
-        <h1>How to interview</h1>
       </div>
       <div className="sbs__content">
         <h2>Why is it so hard?</h2>

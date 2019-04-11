@@ -60,7 +60,13 @@
 .sbs {
 
   h1 {
-    font-size: 3.4rem;
+    font-size: 2.4rem;
+    text-align: center;
+
+    @media(min-width: $breakpoint-large) {
+      font-size: 3.4rem;
+      text-align: left;
+    }
   }
 
   .sbs__summary {
@@ -92,7 +98,11 @@
           line-height: 2rem;
           font-size: 1rem;
 
-          &:before {
+          input {
+            visibility: hidden;
+          }
+
+          label:before {
             content: ' ';
             display: inline-block;
             width: 1rem;
@@ -101,6 +111,12 @@
             border: solid 1px $color-brand-black;
             box-shadow: 2px 2px 2px $color-brand-gray;
             margin-right: 1rem;
+            color: black;
+            line-height: 1rem;
+          }
+
+          input[type="checkbox"]:checked + label:before {
+            content: '🔥';
           }
         }
       }
