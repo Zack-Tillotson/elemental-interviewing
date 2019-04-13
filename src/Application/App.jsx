@@ -12,6 +12,8 @@ import Resume from '../components/Resume';
 import PhoneScreen from '../components/PhoneScreen';
 import Interview from '../components/Interview';
 import FollowUp from '../components/FollowUp';
+// import Printable from '../components/Printable';
+
 
 const componentMap = {
   'Homepage': Homepage,
@@ -35,6 +37,15 @@ function App() {
             exact
             component={componentMap[route.component]} />
         )}
+        <Route path="/print/" exact component={() => (
+          <div className="printable">
+            <Homepage />
+            <Resume />
+            <PhoneScreen />
+            <Interview />
+            <FollowUp />
+          </div>
+        )} />
         <ScrollToTop />
         <PageTitle />
       </Page>
