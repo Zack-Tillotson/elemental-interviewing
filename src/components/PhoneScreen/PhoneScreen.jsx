@@ -27,8 +27,9 @@ const PhoneScreen = function({children}) {
         </div>
       </div>
       <div className="sbs__content">
-        <h2>Is it possible to practice for?</h2>
-        <p>A phone screen allows an employer to verify that a candidate matches their résumé and to get more information. They aren't trying to trick you, they are trying to spend as little time as possible to figure out if you're worth continueing to talk to. This leads us to great strategies for phone screens.</p>
+        <h2>Practice for phone screens specifically</h2>
+        <p>A phone screen allows an employer to verify that a candidate matches their résumé and to get more information.</p>
+        <p>They'll often ask really specific "Gotcha" questions. They aren't trying to trick you, they are trying to spend as little time as possible to figure out if you're worth continueing to talk to.</p>
         <h2>Practice common technical questions</h2>
         <p>One of the most common aspects of a phone screen is to attempt to verify your technical abilities. It's much easier to lie on a résumé than in a conversation. Many times this leads employers to rely on "gotcha" questions, i.e. superficial questions which often don't reflect the real world. This is unfortunate but unavoidable.</p>
         <p>Look up common technical questions for your industry, practice answering them. If you're on a phone screen and don't know the answer to a question make sure to write it down and go back and practice it later.</p>

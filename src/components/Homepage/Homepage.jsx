@@ -39,18 +39,20 @@ const Homepage = function({children}) {
         <h2>Everything boils down to these 3 Elemental questions</h2>
         <p>When you're being asked weird questions or being sent through multiple rounds of interviews it can be confusing and frustrating. How does any of this make sense? How could asking about my greatest weakness help the employer?</p>
         <p>The key to understanding this is realizing that they actually only care about the 3 Elemental questions. Regardless of what question you're asked, what weird interview process you're asked to go through, or how you're clothing is judged, it's all because the employer is seeking to answer "Can you do the job?", "Will you do the job?" or "Do you annoy me?".</p>
-        <p>For the example above, when you're asked "What is your greatest weakness?" you should rephrase the question in your head. "Would your greatest weakness prevent you from being able to do the job?" "Would you greatest weakness make it so you wont do this job?" "Would your greatest weakness annoy me?". When you think about the question in this context it's a lot easier to answer.</p>
-        <p>For example, they'll look at your résumé for the industry "buzzwords" that show you'll be able to do the job - answering question #1 "Can you do the job?".</p>
+      </section>
+      <section className="content">
+        <h2>Convert their questions into the Elemental questions</h2>
+        <p>For the example above, when you're asked "What is your greatest weakness?" you should rephrase the question in your head. "Would your greatest weakness prevent you from being able to do the job?", "Would you greatest weakness make it so you wont do this job?", "Would your greatest weakness annoy me?".</p>
+        <p>When you think about the question in this context it's a lot easier to answer.</p>
       </section>
       <section className="content">
         <h2>You have leverage in the job hunt</h2>
-        <p>Finding an employee is expensive! The employer is spending money, time, and energy to look through resumes, conduct phone screens, and do interviews. The further through the process a candidate is the more money is wasted when they pass - they'll only make money after they hire someone. All of this combines to demonstrate that companies are highly incentivized to hire a candidate.</p>
-      </section>
-      <section className="content">
-        <p>The rest of this site will give specific strategies and tips for your résumé, for phone screening, and for interviewing. You can follow them or not but remember the 3 Elemental questions are what really matter.</p>
+        <p>Finding an employee is expensive! The employer is spending money, time, and energy to look through résumés, conduct phone screens, and do interviews. The further through the process a candidate is the more money is wasted when they pass - they'll only make money after they hire someone. All of this combines to demonstrate that companies are highly incentivized to hire a candidate.</p>
+        <p>Most companies hate the job hiring process as much as the candidates! It's distracting, stressful, and they often don't understand what they're doing. Be a great candidate and they'll jump at the chance to hire you.</p>
       </section>
       <section className="content process-overview">
-        <h3>The stages of the hiring process</h3>
+        <h2>Want résumé and interviewing specifics?</h2>
+        <p>The rest of this site will give specific strategies and tips for your résumé, for phone screening, and for interviewing. You can follow them or not but remember the 3 Elemental questions are what really matter.</p>
         <ol>
           <li>
             <Link to="/resume/" className="process-overview__stage">

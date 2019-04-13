@@ -17,7 +17,7 @@ const FollowUp = function({children}) {
         </figure>
         <div className="sbs-summary__text">
           <h2>In Summary</h2>
-          <p>You'll often need to follow up after an interview. Many people find awkward or think they will annoy the employer. This is not the case! Employers are busy and a follow up message can get you back on their radar.</p>
+          <p>You'll often need to follow up after an interview. Many people find awkward or think they will annoy the employer. This is not the case! Employers are busy and a follow up message can remind them to make the decision.</p>
           <p>In short:</p>
           <ol>
             {['Wait around 4 days', 'Be proactive', 'Don\'t be scared'].map((word, index) => (
@@ -27,9 +27,13 @@ const FollowUp = function({children}) {
         </div>
       </div>
       <div className="sbs__content">
-        <p>Do it if you haven't heard anything in ~4 days, then again after another 4 days.</p>
+        <h2>A follow up doesn't put your job at risk</h2>
+        <p>A follow up message is just a tool used to remind the employer that you exist. People are busy and often there isn't enough time to finish all the tasks an employer has, they have to prioritize. If they push out giving you the offer letter it is often helpful to follow up with them. This encourages them to reprioritize and can get you the job.</p>
+        <p>People sometimes think that a follow up phone call or email will annoy the employer and put their job at risk. This is not the case, it is much more likely to lose a job because they forgot about filling out the paperwork the HR department requires.</p>
+        <h2>Follow up after about one work week</h2>
+        <p>Typically send a follow up message in either phone or email form it if you haven't heard anything in 4 or 5 days.</p>
         <p>Don't take it personally if they don't get back to you, they're busy (because they haven't hired you yet!).</p>
-        <p>It's a great opportunity and a big plus that you're willing to do it</p>
+        <p>Many times if an employer is on the fence about a candidate they could even see the follow up message as a signal you are proactive and professional.</p>
       </div>
     </div>
   );

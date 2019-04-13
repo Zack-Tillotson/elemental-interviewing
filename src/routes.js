@@ -9,28 +9,28 @@ module.exports = [{
   path: '/resume/',
   component: 'Resume',
   title: 'Résumé',
-  subtitle: 'Your foot in the door',
+  subtitle: 'Create a great résumé',
   icon: '/assets/fire.png',
   description: 'The Elemental résumé strategy is based on the 2 ways your résumé will be used.'
 }, {
   path: '/phone-screen/',
   component: 'PhoneScreen',
   title: 'Phone Screen',
-  subtitle: 'Just trivia',
+  subtitle: 'Verify your résumé',
   icon: '/assets/water.png',
   description: 'The Elemental strategy to pass phone screens is based on understanding the secret use of screens.'
 }, {
   path: '/interview/',
   component: 'Interview',
   title: 'Interview',
-  subtitle: 'It\'s Story time',
+  subtitle: 'A simple trick to answer any question',
   icon: '/assets/water.png',
   description: 'The Elemental strategey for interviewing answers the 3 Elemental questions using easy to follow strategies of telling stories.'
 }, {
   path: '/follow-up/',
   component: 'FollowUp',
   title: 'Follow Up',
-  subtitle: 'Seal the deal',
+  subtitle: 'A little goes a long way',
   icon: '/assets/plant.png',
   description: 'The Elemental strategy realizes that following up doesn\'t need to be scary, it\'s actually a big plus.',
 }];
