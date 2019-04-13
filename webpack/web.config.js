@@ -1,6 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
+
 const serve = require('koa-static');
 const rewrite = require('koa-rewrite');
 const baseConfig = require('./base.config.js');
@@ -15,7 +17,10 @@ const templatePlugin = new HtmlWebpackPlugin({
   minify   : {
     collapseWhitespace : true
   },
+  inlineSource: '.css$',
 });
+
+const inlinePlugin = new HtmlWebpackInlineSourcePlugin();
 
 const config = {
   ...baseConfig,
@@ -30,6 +35,7 @@ const config = {
   plugins: [
     ...baseConfig.plugins,
     templatePlugin,
+    inlinePlugin,
   ],
 };
 
