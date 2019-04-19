@@ -19,13 +19,16 @@ const Interview = function({children}) {
         <div className="sbs-summary__text">
           <h2>In Summary</h2>
           <p>Interviewing is stressful, but preparation makes all the difference. Make sure to pratice standard questions like "Tell me about yourself". Then prepare for questions you can't predict by having a set of stories ready to answer with, these stories should represent great answers to the 3 Elemental questions. Finally be ready to interview them in turn.</p>
-          <p>In short:</p>
-          <ol>
-            {['Focus on the 3 Elemental questions', 'Answer "tell me about yourself"', 'Have 5+ stories', 'Pratice using the stories to answer', 'Have questions for them'].map((word, index) => (
-              <li key={word}><input type="checkbox" id={index} /><label htmlFor={index}>{word}</label></li>
-            ))}
-          </ol>
         </div>
+      </div>
+
+      <div className="sbs__checklist">
+        <h3>Interview checklist:</h3>
+        <ol>
+          {['Focus on the 3 Elemental questions', 'Answer "tell me about yourself"', 'Have 5+ stories', 'Pratice using the stories to answer', 'Have questions for them'].map((word, index) => (
+            <li key={word}><input type="checkbox" id={index} /><label htmlFor={index}>{word}</label></li>
+          ))}
+        </ol>
       </div>
       <div className="sbs__content">
         <h2>Why is it so hard?</h2>

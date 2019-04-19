@@ -8,9 +8,11 @@ import './styles';
 const PhoneScreen = function({children}) {
   return (
     <div className="content sbs">
+
       <div className="sbs__title">
         <h1>How to pass a Phone Screen</h1>
       </div>
+
       <div className="sbs__summary">
         <figure role="presentation">
           <span className="nav-link__logo" dangerouslySetInnerHTML={{__html: svgLogo}} />
@@ -18,14 +20,18 @@ const PhoneScreen = function({children}) {
         <div className="sbs-summary__text">
           <h2>In Summary</h2>
           <p>The phone screen is a type of initial interview where an employer tries to ensure a candidate is worth bring in for a full interview. Because they are short and technical you should focus on a good first impression. You can't answer everything perfectly, but be confident and proactive in responding.</p>
-          <p>In short:</p>
-          <ol>
-            {['Practice common technical questions', 'Be professional', 'Be interesting', 'Ask about the job'].map((word, index) => (
-              <li key={word}><input type="checkbox" id={index} /><label htmlFor={index}>{word}</label></li>
-            ))}
-          </ol>
         </div>
       </div>
+
+      <div className="sbs__checklist">
+        <h3>Phone screen checklist:</h3>
+        <ol>
+          {['Practice common questions', 'Be professional', 'Be interesting', 'Ask about the job'].map((word, index) => (
+            <li key={word}><input type="checkbox" id={index} /><label htmlFor={index}>{word}</label></li>
+          ))}
+        </ol>
+      </div>
+
       <div className="sbs__content">
         <h2>Practice for phone screens specifically</h2>
         <p>A phone screen allows an employer to verify that a candidate matches their résumé and to get more information.</p>

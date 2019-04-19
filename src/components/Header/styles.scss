@@ -147,6 +147,11 @@ header.page-header {
     li {
       padding: 1rem 2rem;
       text-shadow: 1px 1px 1px $color-brand-black;
+      border-bottom: solid 1px $color-brand-white;
+
+      &:last-child {
+        border-bottom: none;
+      }
 
       @media(min-width: $breakpoint-medium) {
         display: inline-block;
@@ -186,7 +191,6 @@ header.page-header {
         font-size: calc(.75rem + .3vw);
         font-style: italic;
         margin: 1rem 0;
-        display: none;
         font-weight: 400;
 
         @media(min-width: $breakpoint-large) {

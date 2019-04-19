@@ -51,7 +51,7 @@ const Homepage = function({children}) {
         <p>Most companies hate the job hiring process as much as the candidates! It's distracting, stressful, and they often don't understand what they're doing. Be a great candidate and they'll jump at the chance to hire you.</p>
       </section>
       <section className="content process-overview">
-        <h2>Want résumé and interviewing specifics?</h2>
+        <h2>Next: strategies and tips for each stage of the process</h2>
         <p>The rest of this site will give specific strategies and tips for your résumé, for phone screening, and for interviewing. You can follow them or not but remember the 3 Elemental questions are what really matter.</p>
         <ol>
           <li>

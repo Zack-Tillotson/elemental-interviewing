@@ -18,13 +18,15 @@ const FollowUp = function({children}) {
         <div className="sbs-summary__text">
           <h2>In Summary</h2>
           <p>You'll often need to follow up after an interview. Many people find awkward or think they will annoy the employer. This is not the case! Employers are busy and a follow up message can remind them to make the decision.</p>
-          <p>In short:</p>
-          <ol>
-            {['Wait around 4 days', 'Be proactive', 'Don\'t be scared'].map((word, index) => (
-              <li key={word}><input type="checkbox" id={index} /><label htmlFor={index}>{word}</label></li>
-            ))}
-          </ol>
         </div>
+      </div>
+      <div className="sbs__checklist">
+        <h3>Follow up checklist:</h3>
+        <ol>
+          {['Wait around 4 days', 'Be proactive', 'Don\'t be scared'].map((word, index) => (
+            <li key={word}><input type="checkbox" id={index} /><label htmlFor={index}>{word}</label></li>
+          ))}
+        </ol>
       </div>
       <div className="sbs__content">
         <h2>A follow up doesn't put your job at risk</h2>

@@ -8,9 +8,11 @@ import './styles';
 const Resume = function({children}) {
   return (
     <div className="content sbs">
+
       <div className="sbs__title">
         <h1>How to build a great Résumé</h1>
       </div>
+
       <div className="sbs__summary">
         <figure role="presentation">
           <span className="nav-link__logo" dangerouslySetInnerHTML={{__html: svgLogo}} />
@@ -18,14 +20,18 @@ const Resume = function({children}) {
         <div className="sbs-summary__text">
           <h2>In Summary</h2>
           <p>A great résumé is the starting point to successful interview, it should be easily skimmed and professional, and contain information you want to talk about during interviews.</p>
-          <p>In short:</p>
-          <ol>
-            {['Skimmable', 'Proofread', 'Interesting', 'Contains buzzwords', '1-2 pages'].map((word, index) => (
-              <li key={word}><input type="checkbox" id={index} /><label htmlFor={index}>{word}</label></li>
-            ))}
-          </ol>
         </div>
       </div>
+
+      <div className="sbs__checklist">
+        <h3>Résumé checklist:</h3>
+        <ol>
+          {['Skimmable', 'Proofread', 'Interesting', 'Contains buzzwords', '1-2 pages'].map((word, index) => (
+            <li key={word}><input type="checkbox" id={index} /><label htmlFor={index}>{word}</label></li>
+          ))}
+        </ol>
+      </div>
+
       <div className="sbs__content">
 
         <h2>A Résumé is used in two ways</h2>
