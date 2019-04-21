@@ -33,7 +33,7 @@ const PhoneScreen = function({children}) {
       </div>
 
       <div className="sbs__content">
-        <h2>Practice for phone screens specifically</h2>
+        <h2>Phone screens are a little different than full interviews</h2>
         <p>A phone screen allows an employer to verify that a candidate matches their résumé and to get more information.</p>
         <p>They'll often ask really specific "Gotcha" questions. They aren't trying to trick you, they are trying to spend as little time as possible to figure out if you're worth continueing to talk to.</p>
         <h2>Practice common technical questions</h2>

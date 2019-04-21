@@ -67,6 +67,26 @@
   color: $color-brand-primary;
 }
 
+.elemental-questions {
+  display: grid;
+  grid-template-areas:
+    "content"
+    "comic";
+
+  img {
+    grid-area: comic;
+  }
+
+  div {
+    grid-area: content;
+  }
+
+  @media(min-width: $breakpoint-large) {
+    grid-template-areas:
+      "content comic";
+  }
+}
+
 .process-overview {
   padding-bottom: 3rem;
 
