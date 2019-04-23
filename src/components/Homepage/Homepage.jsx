@@ -1,7 +1,6 @@
 import React, {Fragment} from 'react';
 
 import {Link} from 'react-router-dom';
-import svgLogo from 'assets/flamo.svg';
 
 import './styles';
 
@@ -10,21 +9,20 @@ const Homepage = function({children}) {
     <Fragment>
       <header className="homepage__header">
         <div className="content">
-          <div className="column__one">
-            <h1>Interviewing Simplified</h1>
-            <p className="bragging">
-              Interviewing comes down to the 3 Elemental questions. To get a great job learn what they are and how to answer them.
-            </p>
-          </div>
-          <div className="column__two">
-            <figure role="presentation">
-              <span className="nav-link__logo" dangerouslySetInnerHTML={{__html: svgLogo}} />
-            </figure>
-          </div>
+          <h1>Interviewing Simplified</h1>
+          <p className="bragging">
+            Interviewing comes down to the 3 Elemental questions. To get a great job learn what they are and how to answer them.
+          </p>
         </div>
       </header>
       <section className="content elemental-questions">
-        <img src="/assets/elementalinterviewing_comic.png" />
+        <figure role="presentation">
+          <img
+            alt="Can you do the job? Will you do the job? Are you annoying? Yes Yes No! Ok - Take my money?"
+            className="elemental-questions__logo"
+            src="/assets/comic_200.png"
+          />
+        </figure>
         <div>
           <h2 className="content-headline">There are only 3 Elemental questions</h2>
           <p>The process of getting a job is weird! You have to do things you're not used to - writing down your qualifications in the form of a résumé, talking to strangers about your job history, answering silly interview questions, and much more.</p>

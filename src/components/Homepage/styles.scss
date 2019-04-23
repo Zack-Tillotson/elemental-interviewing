@@ -34,33 +34,6 @@
     display: table;
     clear: both;
   }
-
-  .column__one {
-
-    @media(min-width: $breakpoint-small) {
-      float: left;
-      width: 66.66667%;
-    }
-  }
-
-  .column__two {
-    margin-top: 1rem;
-
-    @media(min-width: $breakpoint-small) {
-      margin-top: auto;
-      width: 33.33333%;
-      float: left;
-      max-width: 15rem;
-    }
-
-    figure {
-      margin: 0 auto;
-    }
-
-    img {
-      width: 100%;
-    }
-  }
 }
 
 .highlight {
@@ -84,6 +57,15 @@
   @media(min-width: $breakpoint-large) {
     grid-template-areas:
       "content comic";
+  }
+
+  .elemental-questions__logo {
+    display: none;
+
+    @media(min-width: $breakpoint-large) {
+      display: inline-block;
+      margin-left: 1rem;
+    }
   }
 }
 
