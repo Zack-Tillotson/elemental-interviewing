@@ -16,13 +16,18 @@ const Homepage = function({children}) {
         </div>
       </header>
       <section className="content elemental-questions">
-        <figure role="presentation">
+        <picture className="elemental-questions__logo">
+          <source
+            type="image/webp"
+            alt="Can you do the job? Will you do the job? Are you annoying? Yes Yes No! Ok - Take my money?"
+            srcset="/assets/comic_200.webp"
+          />
           <img
             alt="Can you do the job? Will you do the job? Are you annoying? Yes Yes No! Ok - Take my money?"
             className="elemental-questions__logo"
             src="/assets/comic_200.png"
           />
-        </figure>
+        </picture>
         <div>
           <h2 className="content-headline">There are only 3 Elemental questions</h2>
           <p>The process of getting a job is weird! You have to do things you're not used to - writing down your qualifications in the form of a résumé, talking to strangers about your job history, answering silly interview questions, and much more.</p>
