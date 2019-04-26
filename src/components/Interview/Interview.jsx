@@ -2,8 +2,6 @@ import React from 'react';
 
 import {Link} from 'react-router-dom';
 
-import svgLogo from 'assets/flamo-interview.svg';
-
 import './styles';
 
 const Interview = function({children}) {
@@ -13,9 +11,14 @@ const Interview = function({children}) {
         <h1>How to interview</h1>
       </div>
       <div className="sbs__summary">
-        <figure role="presentation">
-          <span className="nav-link__logo" dangerouslySetInnerHTML={{__html: svgLogo}} />
-        </figure>
+        <picture className="elemental-questions__logo">
+          <source
+            type="image/webp"
+            alt="Prepared and ready to interview"
+            srcSet="/assets/resume-180.webp"
+          />
+          <img className="nav-link__logo" src="/assets/resume-180.png" alt="Prepared and ready to interview" />
+        </picture>
         <div className="sbs-summary__text">
           <h2>In Summary</h2>
           <p>Interviewing is stressful, but preparation makes all the difference. Make sure to pratice standard questions like "Tell me about yourself". Then prepare for questions you can't predict by having a set of stories ready to answer with, these stories should represent great answers to the 3 Elemental questions. Finally be ready to interview them in turn.</p>

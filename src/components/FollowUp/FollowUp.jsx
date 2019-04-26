@@ -1,7 +1,6 @@
 import React from 'react';
 
 import {Link} from 'react-router-dom';
-import svgLogo from 'assets/flamo-offer.svg';
 
 import './styles';
 
@@ -12,9 +11,14 @@ const FollowUp = function({children}) {
         <h1>Follow up after an interview</h1>
       </div>
       <div className="sbs__summary">
-        <figure role="presentation">
-          <span className="nav-link__logo" dangerouslySetInnerHTML={{__html: svgLogo}} />
-        </figure>
+        <picture className="elemental-questions__logo">
+          <source
+            type="image/webp"
+            alt="Bravely following up"
+            srcSet="/assets/follow-180.webp"
+          />
+          <img className="nav-link__logo" src="/assets/follow-180.png" alt="Bravely following up" />
+        </picture>
         <div className="sbs-summary__text">
           <h2>In Summary</h2>
           <p>You'll often need to follow up after an interview. Many people find awkward or think they will annoy the employer. This is not the case! Employers are busy and a follow up message can remind them to make the decision.</p>

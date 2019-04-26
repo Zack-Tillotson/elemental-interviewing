@@ -1,7 +1,6 @@
 import React from 'react';
 
 import {Link} from 'react-router-dom';
-import svgLogo from 'assets/flamo-resume.svg';
 
 import './styles';
 
@@ -14,9 +13,14 @@ const Resume = function({children}) {
       </div>
 
       <div className="sbs__summary">
-        <figure role="presentation">
-          <span className="nav-link__logo" dangerouslySetInnerHTML={{__html: svgLogo}} />
-        </figure>
+        <picture className="elemental-questions__logo">
+          <source
+            type="image/webp"
+            alt="Proud to have a great résumé"
+            srcSet="/assets/resume-180.webp"
+          />
+          <img className="nav-link__logo" src="/assets/resume-180.png" alt="Proud to have a great résumé" />
+        </picture>
         <div className="sbs-summary__text">
           <h2>In Summary</h2>
           <p>A great résumé is the starting point to successful interview, it should be easily skimmed and professional, and contain information you want to talk about during interviews.</p>

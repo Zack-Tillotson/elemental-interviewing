@@ -1,7 +1,6 @@
 import React from 'react';
 
 import {Link} from 'react-router-dom';
-import svgLogo from 'assets/flamo-phone.svg';
 
 import './styles';
 
@@ -14,9 +13,14 @@ const PhoneScreen = function({children}) {
       </div>
 
       <div className="sbs__summary">
-        <figure role="presentation">
-          <span className="nav-link__logo" dangerouslySetInnerHTML={{__html: svgLogo}} />
-        </figure>
+        <picture className="elemental-questions__logo">
+          <source
+            type="image/webp"
+            alt="Nailing a phone screen"
+            srcSet="/assets/phone-180.webp"
+          />
+          <img className="nav-link__logo" src="/assets/phone-180.png" alt="Nailing a phone screen" />
+        </picture>
         <div className="sbs-summary__text">
           <h2>In Summary</h2>
           <p>The phone screen is a type of initial interview where an employer tries to ensure a candidate is worth bring in for a full interview. Because they are short and technical you should focus on a good first impression. You can't answer everything perfectly, but be confident and proactive in responding.</p>

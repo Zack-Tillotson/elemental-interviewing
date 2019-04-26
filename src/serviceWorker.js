@@ -1,4 +1,4 @@
-var CACHE_NAME = 'my-site-cache-v1';
+var CACHE_NAME = 'my-site-cache-v2';
 var urlsToCache = [
   '/',
   '/resume/',
@@ -6,6 +6,10 @@ var urlsToCache = [
   '/phone-screen/',
   '/follow-up/',
   '/assets/comic_200.webp',
+  '/assets/resume-180.webp',
+  '/assets/phone-180.webp',
+  '/assets/interview-180.webp',
+  '/assets/follow-180.webp',
 ];
 
 self.addEventListener('install', function(event) {
