@@ -20,7 +20,7 @@ const Homepage = function({children}) {
           <source
             type="image/webp"
             alt="Can you do the job? Will you do the job? Are you annoying? Yes Yes No! Ok - Take my money?"
-            srcset="/assets/comic_200.webp"
+            srcSet="/assets/comic_200.webp"
           />
           <img
             alt="Can you do the job? Will you do the job? Are you annoying? Yes Yes No! Ok - Take my money?"

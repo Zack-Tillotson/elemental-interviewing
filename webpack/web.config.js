@@ -43,12 +43,12 @@ if(!isProdBuild) {
   config.devtool = 'inline-source-map';
   config.devServer = {
     port: '8888',
-    index: 'template.html',
+    index: 'pageTemplate.html',
     contentBase: 'static',
     proxy: {
       '**/': {
         target: 'http://localhost:8888',
-        pathRewrite: {'.*': 'template.html'},
+        pathRewrite: {'.*': 'pageTemplate.html'},
       }
     },
   }
