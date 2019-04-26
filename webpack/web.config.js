@@ -10,9 +10,9 @@ const baseConfig = require('./base.config.js');
 const isProdBuild = process.argv.indexOf('-p') !== -1;
 
 const templatePlugin = new HtmlWebpackPlugin({
-  template      : './src/template.html',
+  template      : './static/pageTemplate.html',
   hash          : false,
-  filename      : 'template.html',
+  filename      : 'pageTemplate.html',
   inject        : 'body',
   minify   : {
     collapseWhitespace : true
