@@ -15,7 +15,7 @@ function Header({preferencesOpen, location}) {
   return (
     <header className="page-header">
       <div className="logo">
-        <Link to="/">
+        <Link to="/" alt="Back to the homepage">
           <figure role="presentation">
             <span dangerouslySetInnerHTML={{__html: svgLogo}} />
             <figcaption role="presentation">Elemental Interviewing</figcaption>
