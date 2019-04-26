@@ -39,6 +39,18 @@ const config = {
   ],
 };
 
+const swConfig = {
+  ...baseConfig,
+  entry: {
+    'serviceWorker': './src/serviceWorker.js',
+  },
+  output: {
+    filename: '[name].js',
+    path: path.join(__dirname, '../app'),
+    publicPath: isProdBuild ? '/' : 'http://localhost:8888/' // Required for webpack-serve
+  },
+}
+
 if(!isProdBuild) {
   config.devtool = 'inline-source-map';
   config.devServer = {
@@ -52,6 +64,9 @@ if(!isProdBuild) {
       }
     },
   }
+
+  swConfig.devtool = 'inline-source-map';
+
 }
 
-module.exports = config;
+module.exports = [config, swConfig];

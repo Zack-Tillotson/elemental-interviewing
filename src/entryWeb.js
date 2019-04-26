@@ -10,3 +10,9 @@ ReactDOM.render(
     <Application />
   </BrowserRouter>
 , document.getElementById('app-container'));
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/serviceWorker.js');
+  });
+}
