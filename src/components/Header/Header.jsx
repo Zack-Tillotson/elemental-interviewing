@@ -36,7 +36,6 @@ function Header({preferencesOpen, location}) {
               <li key={route.path}>
                 <Link to={route.path} className={classnames('nav-link', {'route--active': route.path === location.pathname})} onClick={onMenuClick}>
                   <figure role="presentation">
-                    <img className="nav-link__logo" src={route.icon} />
                     <figcaption role="presentation">
                       <h2>{route.title}</h2>
                       <p>{route.subtitle}</p>
