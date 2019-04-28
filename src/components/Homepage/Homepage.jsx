@@ -30,8 +30,9 @@ const Homepage = function({children}) {
         </picture>
         <div>
           <h2 className="content-headline">There are only 3 Elemental questions</h2>
-          <p>The process of getting a job is weird! You have to do things you're not used to - writing down your qualifications in the form of a résumé, talking to strangers about your job history, answering silly interview questions, and much more.</p>
-          <p>It's easy to be confused and distracted by all of this but the whole process can be boiled down to answering three Elemental questions.</p>
+          <p>The process of getting a job is weird and that's why this site exists. We explain the whole system from making a résumé to interviewing to the follow up.</p>
+          <p>It's easy to be confused and frustrated by what seems to be a broken system. You'll be asked to do strange tasks and answer weird questions, it can be overwelming.</p>
+          <p>Fortunately the whole process can be boiled down to answering three Elemental questions.</p>
           <h3 className="ordered-list--important highlight">1. Can you do the job?</h3>
           <p>Are you technical capable of doing this job? Are you experienced enough? Can you learn the aspects of the job you don't already know?</p>
           <p>This question is trying to ensure an employee has the experience and technical skills to do the job. Many candidates think this is the only thing they need to show in order to get a job, but it's just the first step!</p>

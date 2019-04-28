@@ -16,10 +16,7 @@ function Header({preferencesOpen, location}) {
     <header className="page-header">
       <div className="logo">
         <Link to="/" title="Back to the homepage">
-          <figure role="presentation">
-            <span dangerouslySetInnerHTML={{__html: svgLogo}} />
-            <figcaption role="presentation">Elemental Interviewing</figcaption>
-          </figure>
+          <span className="elemental">Elemental</span> Interviewing
         </Link>
       </div>
       <a href="#footer" className="menu-trigger" role="button" aria-haspopup={true} onClick={onTriggerClick}>
@@ -35,12 +32,8 @@ function Header({preferencesOpen, location}) {
             .map(route =>
               <li key={route.path}>
                 <Link to={route.path} className={classnames('nav-link', {'route--active': route.path === location.pathname})} onClick={onMenuClick}>
-                  <figure role="presentation">
-                    <figcaption role="presentation">
-                      <h2>{route.title}</h2>
-                      <p>{route.subtitle}</p>
-                    </figcaption>
-                  </figure>
+                  <h2>{route.title}</h2>
+                  <p>{route.subtitle}</p>
                 </Link>
               </li>
             )}

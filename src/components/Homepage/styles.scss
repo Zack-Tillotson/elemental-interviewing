@@ -45,6 +45,7 @@
   grid-template-areas:
     "content"
     "comic";
+  padding-bottom: 0;
 
   img {
     grid-area: comic;
