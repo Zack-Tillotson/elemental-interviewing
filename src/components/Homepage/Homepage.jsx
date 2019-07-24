@@ -1,6 +1,7 @@
 import React, {Fragment} from 'react';
 
 import {Link} from 'react-router-dom';
+import InstallPrompt from '../InstallPrompt';
 
 import './styles';
 
@@ -15,6 +16,7 @@ const Homepage = function({children}) {
           </p>
         </div>
       </header>
+      <InstallPrompt className="content" />
       <section className="content elemental-questions">
         <picture className="elemental-questions__logo">
           <source

@@ -1,12 +1,15 @@
 import React from 'react';
 
 import {Link} from 'react-router-dom';
+import InstallPrompt from '../InstallPrompt';
 
 import './styles';
 
 const Resume = function({children}) {
   return (
     <div className="content sbs">
+
+      <InstallPrompt className="sbs__install" />
 
       <div className="sbs__title">
         <h1>How to build a great Résumé</h1>

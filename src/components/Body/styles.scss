@@ -70,6 +70,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
+    "install"
     "title"
     "summary"
     "content"
@@ -78,11 +79,11 @@
   grid-column-gap: 1rem;
 
   @media(min-width: $breakpoint-large) {
-    padding-top: calc(.5rem + 3vw);
     padding-bottom: calc(.5rem + 3vw);
     grid-template-columns: 22rem auto;
-    grid-template-rows: auto auto 1fr auto;
+    grid-template-rows: auto auto auto 1fr auto;
     grid-template-areas:
+      "install   install"
       "summary   title  "
       "summary   content"
       "checklist content"
@@ -97,6 +98,10 @@
       font-size: 3.4rem;
       text-align: left;
     }
+  }
+
+  .sbs__install {
+    grid-area: install;
   }
 
   .sbs__summary {

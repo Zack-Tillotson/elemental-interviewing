@@ -1,0 +1,44 @@
+@import 'src/_vars';
+
+.install-prompt {
+  display: grid;
+  grid-template-areas:
+    "expl expl expl"
+    "logo title button";
+  grid-template-columns:
+    auto 1fr auto;
+  grid-gap: 0 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  .install-prompt__explanation {
+    grid-area: expl;
+    font-size: .75rem;
+    color: #333;
+    margin: 0;
+  }
+
+  .install-prompt__logo {
+    width: 48px;
+    height: 48px;
+    grid-area: logo;
+  }
+
+  .install-prompt__title {
+    display: grid; /* wut? */
+    font-size: 1rem;
+    grid-area: title;
+  }
+
+  .install-prompt__button {
+    background: $color-brand-primary;
+    padding: 1rem;
+    color: $color-brand-white;
+    grid-area: button;
+  }
+
+  @media(min-width: $breakpoint-small) {
+    padding-bottom: 1rem;
+    border-bottom: solid 1px $color-brand-gray;
+  }
+}
