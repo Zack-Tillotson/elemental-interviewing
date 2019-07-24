@@ -3,25 +3,19 @@
 // button.
 import React, {useState, useEffect} from 'react';
 
-window.__log__.push('usePwaInstall defined');
-
 function usePwaInstall() {
 
   const [installEvent, saveInstallEvent] = useState(null);
   const [installationState, updateInstallationState] = useState('before');
 
   useEffect(() => {
-    const saveEventHandler = e => {
-      window.__log__.push('usePwaInstall saveEventHandler');
+    const saveEventHandler = function(e) {
       e.preventDefault();
       saveInstallEvent(e);
     }
     const installationFinishedHandler = e => {
-      window.__log__.push('usePwaInstall installationFinishedHandler');
       updateInstallationState('installed');
     }
-
-    window.__log__.push('usePwaInstall called');
 
     window.addEventListener('beforeinstallprompt ', saveEventHandler);
     window.addEventListener('appinstalled', installationFinishedHandler);
@@ -33,7 +27,6 @@ function usePwaInstall() {
   }, []);
 
   const triggerInstall = e => {
-    window.__log__.push('usePwaInstall triggerInstall');
     if(!!installEvent) {
       installEvent.prompt();
       installEvent.userChoice.then(result => {
