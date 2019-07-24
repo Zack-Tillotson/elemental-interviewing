@@ -17,7 +17,7 @@ function usePwaInstall() {
       updateInstallationState('installed');
     }
 
-    window.addEventListener('beforeinstallprompt ', saveEventHandler);
+    window.addEventListener('beforeinstallprompt', saveEventHandler);
     window.addEventListener('appinstalled', installationFinishedHandler);
 
     return () => {
