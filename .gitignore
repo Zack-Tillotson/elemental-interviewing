@@ -35,3 +35,4 @@ npm-debug.log
 app/
 yarn-error.log
 ./config.js
+contentful.json
