@@ -21,7 +21,7 @@ const config = {
   mode: isProdBuild ? 'production' : 'development',
   resolve: {
     modules: ['node_modules', './src', './static'],
-    extensions: ['.js', '.jsx', '.scss']
+    extensions: ['.js', '.jsx', '.scss', '.json']
   },
   node: {
     fs: "empty"

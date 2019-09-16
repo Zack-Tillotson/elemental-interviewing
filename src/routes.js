@@ -5,6 +5,7 @@ module.exports = [{
   subtitle: '3 Elemental questions',
   description: 'Learn the Elemental step by step guide to interviewing. It includes real world strategies for each step of the job hiring process.',
   priority: '1.00',
+  contentId: '71wUKRG4mZmkRGoXjZ1HRV',
 }, {
   path: '/resume/',
   component: 'Resume',
@@ -12,6 +13,7 @@ module.exports = [{
   subtitle: 'Create a great résumé',
   description: 'The Elemental résumé strategy is based on the 2 ways your résumé will be used.',
   priority: '0.80',
+  contentId: '7CFF9HISMCxUry2sXEaZd1',
 }, {
   path: '/phone-screen/',
   component: 'PhoneScreen',
@@ -19,6 +21,7 @@ module.exports = [{
   subtitle: 'Verify your résumé',
   description: 'The Elemental strategy to pass phone screens is based on understanding the secret use of screens.',
   priority: '0.80',
+  contentId: '5tX5uTI5USjO1GprBRFynh',
 }, {
   path: '/interview/',
   component: 'Interview',
@@ -26,6 +29,7 @@ module.exports = [{
   subtitle: 'A simple trick to answer any question',
   description: 'The Elemental strategey for interviewing answers the 3 Elemental questions using easy to follow strategies of telling stories.',
   priority: '0.80',
+  contentId: '2XJRl3PMtlSBM4lPC3AfzX',
 }, {
   path: '/follow-up/',
   component: 'FollowUp',
@@ -33,4 +37,5 @@ module.exports = [{
   subtitle: 'A little goes a long way',
   description: 'The Elemental strategy realizes that following up doesn\'t need to be scary, it\'s actually a big plus.',
   priority: '0.80',
+  contentId: '1DlG1BViOVuDDLBm9iXp5f',
 }];

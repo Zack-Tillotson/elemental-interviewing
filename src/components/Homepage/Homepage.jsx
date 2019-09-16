@@ -5,14 +5,17 @@ import InstallPrompt from '../InstallPrompt';
 
 import './styles';
 
-const Homepage = function({children}) {
+import getContent from 'getContent';
+
+const Homepage = function({children, contentId}) {
+  const content = getContent(contentId);
   return (
     <Fragment>
       <header className="homepage__header">
         <div className="content">
-          <h1>Interviewing Simplified</h1>
+          <h1>{content.title}</h1>
           <p className="bragging">
-            Interviewing comes down to the 3 Elemental questions. To get a great job learn what they are and how to answer them.
+            {content.subtitle}
           </p>
         </div>
       </header>

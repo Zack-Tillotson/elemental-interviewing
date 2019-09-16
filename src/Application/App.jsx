@@ -15,7 +15,7 @@ import FollowUp from '../components/FollowUp';
 // import Printable from '../components/Printable';
 
 
-const componentMap = {
+const ComponentMap = {
   'Homepage': Homepage,
   'Resume': Resume,
   'PhoneScreen': PhoneScreen,
@@ -35,7 +35,10 @@ function App() {
             key={route.path}
             path={route.path}
             exact
-            component={componentMap[route.component]} />
+            render={() => {
+              const Comp = ComponentMap[route.component];
+              return <Comp {...route} />;
+            }} />
         )}
         <Route path="/print/" exact component={() => (
           <div className="printable">

@@ -7,11 +7,12 @@
     "start": "node_modules/.bin/webpack-dev-server --config=./webpack/web.config.js",
     "compile-app": "mkdir app",
     "compile-assets": "cp -r static/* app/",
+    "compile-content": "./buildContent.js",
     "compile-web": "./node_modules/webpack-cli/bin/webpack.js -p --config=./webpack/web.config.js",
     "compile-node": "./node_modules/webpack-cli/bin/webpack.js -p --config ./webpack/node.config.js",
     "compile-routes": "./buildStatic.js",
     "compile-deploy": "firebase deploy",
-    "compile": "yarn clean && yarn compile-app && yarn compile-assets && yarn compile-web && yarn compile-node && yarn compile-routes && yarn compile-deploy"
+    "compile": "yarn clean && yarn compile-app && yarn compile-content && yarn compile-assets && yarn compile-web && yarn compile-node && yarn compile-routes && yarn compile-deploy"
   },
   "repository": {
     "type": "git",

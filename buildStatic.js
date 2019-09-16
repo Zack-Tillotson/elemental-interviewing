@@ -3,11 +3,10 @@
 const fs = require('fs');
 const Handlebars = require('handlebars');
 const config = require('./config');
-
-require('./app/build');
-
+const content = require('./app/content.json');
 const routes = require('./src/routes');
-const content = require('./getContent')();
+
+require('./app/build'); // Sets global.renderApp via hack from entryNode.js
 
 function compileHtml() {
 
@@ -28,7 +27,6 @@ function compileHtml() {
       appHtml: routeHtml,
       pageTitle: routeTitle,
       description,
-      content,
     });
     const fileName = `${dir}index.html`;
     fs.writeFile(fileName, fileContent, function(err) {
