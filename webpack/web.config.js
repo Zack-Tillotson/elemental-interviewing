@@ -5,9 +5,12 @@ const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin
 
 const serve = require('koa-static');
 const rewrite = require('koa-rewrite');
-const baseConfig = require('./base.config.js');
+const baseConfig = require('./base.config');
+const getContent = require('../getContent');
 
 const isProdBuild = process.argv.indexOf('-p') !== -1;
+
+const content = isProdBuild ? null : getContent();
 
 const templatePlugin = new HtmlWebpackPlugin({
   template      : './static/pageTemplate.html',
@@ -18,6 +21,7 @@ const templatePlugin = new HtmlWebpackPlugin({
     collapseWhitespace : true
   },
   inlineSource: '.css$',
+  content,
 });
 
 const inlinePlugin = new HtmlWebpackInlineSourcePlugin();
@@ -26,6 +30,9 @@ const config = {
   ...baseConfig,
   entry: {
     'assets/app': './src/entryWeb.js',
+  },
+  externals: {
+    'content': 'window.__content__',
   },
   output: {
     filename: '[name]-[hash].js',

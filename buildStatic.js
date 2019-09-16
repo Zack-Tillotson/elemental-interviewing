@@ -2,13 +2,12 @@
 
 const fs = require('fs');
 const Handlebars = require('handlebars');
-
-const config = require('./config.js');
+const config = require('./config');
 
 require('./app/build');
 
 const routes = require('./src/routes');
-
+const content = require('./getContent')();
 
 function compileHtml() {
 
@@ -21,7 +20,7 @@ function compileHtml() {
       fs.mkdirSync(dir);
     }
 
-    const routeHtml = global.renderApp(path);
+    const routeHtml = global.renderApp(path, content);
     const routeTitle = `${title} | Elemental Interviewing`;
 
     const fileContent = template({
@@ -29,6 +28,7 @@ function compileHtml() {
       appHtml: routeHtml,
       pageTitle: routeTitle,
       description,
+      content,
     });
     const fileName = `${dir}index.html`;
     fs.writeFile(fileName, fileContent, function(err) {

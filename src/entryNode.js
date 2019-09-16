@@ -4,9 +4,9 @@ import { StaticRouter } from 'react-router-dom';
 
 import Application from './Application';
 
-const renderApp = url => ReactDOMServer.renderToString(
+const renderApp = (url, content) => ReactDOMServer.renderToString(
   <StaticRouter location={url}>
-    <Application />
+    <Application content={content} />
   </StaticRouter>
 );
 

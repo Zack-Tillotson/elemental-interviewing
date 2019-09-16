@@ -4,10 +4,11 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
 import Application from './Application';
+import content from 'content';
 
 ReactDOM.render(
   <BrowserRouter>
-    <Application />
+    <Application content={content} />
   </BrowserRouter>
 , document.getElementById('app-container'));
 
