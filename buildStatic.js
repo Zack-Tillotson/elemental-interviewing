@@ -3,7 +3,7 @@
 const fs = require('fs');
 const Handlebars = require('handlebars');
 const config = require('./config');
-const content = require('./app/content.json');
+const content = require('./src/content.json');
 const routes = require('./src/routes');
 
 require('./app/build'); // Sets global.renderApp via hack from entryNode.js

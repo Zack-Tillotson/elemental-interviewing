@@ -66,7 +66,6 @@ if(!isProdBuild) {
   }
 
   swConfig.devtool = 'inline-source-map';
-
 }
 
 module.exports = [config, swConfig];
