@@ -8,47 +8,37 @@ import PageTitle from './PageTitle';
 
 import Page from '../components/Page';
 import Homepage from '../components/Homepage';
-import Resume from '../components/Resume';
-import PhoneScreen from '../components/PhoneScreen';
-import Interview from '../components/Interview';
-import FollowUp from '../components/FollowUp';
-// import Printable from '../components/Printable';
+import ContentPage from '../components/ContentPage';
 
-
-const ComponentMap = {
-  'Homepage': Homepage,
-  'Resume': Resume,
-  'PhoneScreen': PhoneScreen,
-  'Interview': Interview,
-  'FollowUp': FollowUp,
-  undefined: () => 'TODO',
-};
-
-const routes = require('routes');
+import getContent from 'getContent';
 
 function App() {
   return (
     <Provider store={store}>
       <Page>
-        {routes.map(route =>
-          <Route
-            key={route.path}
-            path={route.path}
-            exact
-            render={() => {
-              const Comp = ComponentMap[route.component];
-              return <Comp {...route} />;
-            }} />
-        )}
-        <Route path="/print/" exact component={() => (
-          <div className="printable">
-            <Homepage />
-            <Resume />
-            <PhoneScreen />
-            <Interview />
-            <FollowUp />
-          </div>
-        )} />
+        {getContent('7gC3t9SVMhmKSGJ1Nb8h5').fields.route.map(route => {
+          let Comp = null;
+          switch(route.sys.contentType.sys.id) {
+            case 'homepage': {
+              Comp = Homepage;
+              break;
+            }
+            case 'contentPage': {
+              Comp = ContentPage;
+              break;
+            }
+          }
+
+          return (
+            <Route
+              key={route.sys.id}
+              path={route.fields.url}
+              exact
+              render={() => {
+                return <Comp {...route} />;
+              }} />
+          );
+        })}
         <ScrollToTop />
         <PageTitle />
       </Page>

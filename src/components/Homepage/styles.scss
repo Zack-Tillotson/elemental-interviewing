@@ -1,12 +1,5 @@
 @import 'src/_vars';
 
-.ordered-list--important {
-  font-weight: bold;
-  list-style: decimal;
-
-  font-size: calc(1.75rem + .2vw);
-}
-
 .extra-spaced {
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -36,8 +29,14 @@
   }
 }
 
-.highlight {
+.top-content h3 {
   color: $color-brand-primary;
+
+  font-weight: bold;
+  list-style: decimal;
+
+  font-size: calc(1.75rem + .2vw);
+
 }
 
 .elemental-questions {

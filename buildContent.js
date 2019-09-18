@@ -9,9 +9,9 @@ const client = contentful.createClient(config);
 const content = {};
 
 const contentPromises = [
-  'contentPage',
-  'homepage',
+  'routes',
   'nav',
+  'navLink',
 ].reduce((promises, type) => {
   const promise = client.getEntries({
       content_type: type,
