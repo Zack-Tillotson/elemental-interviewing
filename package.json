@@ -54,7 +54,7 @@
     "webpack": "4.3.0"
   },
   "devDependencies": {
-    "handlebars": "^4.1.0",
+    "handlebars": "^4.3.0",
     "html-webpack-inline-source-plugin": "^0.0.10",
     "mini-css-extract-plugin": "0.5.0",
     "webpack-cli": "^2.0.13",
